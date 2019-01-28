@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+.header-background img {
+  width: 100%;
+  max-width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+
+.header-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  .header-menu .menu-bar {
+    transition: all 1s ease-in-out;
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center; }
+    .header-menu .menu-bar .menu-btn {
+      padding-right: 20px;
+      transition: all 1s ease-out;
+      cursor: pointer; }
+      .header-menu .menu-bar .menu-btn .btn-line {
+        height: 3px;
+        width: 28px;
+        background: #fff;
+        margin-bottom: 6px;
+        border-radius: 60px; }
+      .header-menu .menu-bar .menu-btn.close .btn-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px); }
+      .header-menu .menu-bar .menu-btn.close .btn-line:nth-child(2) {
+        opacity: 0; }
+      .header-menu .menu-bar .menu-btn.close .btn-line:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -7px); }
+  .header-menu .menu-nav {
+    font-family: "Lato";
+    font-size: 12px;
+    font-weight: 400;
+    transition: all 1s ease-in-out;
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+    background: #000;
+    margin-top: 50px;
+    width: 100%;
+    font-size: 16px; }
+    .header-menu .menu-nav ul {
+      list-style: none; }
+      .header-menu .menu-nav ul li {
+        text-align: center;
+        padding: 10px 0; }
+        .header-menu .menu-nav ul li a {
+          text-decoration: none;
+          color: #fff; }
+        .header-menu .menu-nav ul li:hover {
+          background-color: #992727; }
+    .header-menu .menu-nav.show {
+      visibility: visible;
+      transform: translate3d(0, 0, 0); }
+
+.header-description {
+  height: 100vh;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  .header-description .title,
+  .header-description .content {
+    font-weight: 400;
+    font-family: "Playfair Display"; }
+  .header-description .title {
+    line-height: 1.1;
+    font-size: 45px; }
+  .header-description .content {
+    margin-top: 20px;
+    font-size: 20px; }
+
+.aparthotel {
+  width: 100%;
+  min-height: 100vh;
+  margin: 30px 0;
+  display: grid;
+  grid-template-areas: "title img1" "img2 desc1" "desc2 img3";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; }
+  .aparthotel-img-1, .aparthotel-img-2, .aparthotel-img-3 {
+    width: 100%;
+    height: 100%; }
+  .aparthotel-img-1 {
+    grid-area: img1; }
+  .aparthotel-img-2 {
+    grid-area: img2; }
+  .aparthotel-img-3 {
+    grid-area: img3; }
+  .aparthotel-title, .aparthotel-description {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .aparthotel-description {
+    grid-area: desc;
+    font-family: "Lato";
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 15px; }
+  .aparthotel-description-1 {
+    grid-area: desc1; }
+  .aparthotel-description-2 {
+    grid-area: desc2; }
+  .aparthotel-title {
+    grid-area: title;
+    font-family: "Playfair Display";
+    font-weight: 400;
+    color: #992727; }
+
+.apartments {
+  margin: 30px 0;
+  width: 100%;
+  min-height: 70vh;
+  display: grid;
+  grid-template-areas: "title img1" "img2 desc1";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; }
+  .apartments-img-1, .apartments-img-2 {
+    width: 100%;
+    height: 100%; }
+  .apartments-img-1 {
+    grid-area: img1; }
+  .apartments-img-2 {
+    grid-area: img2; }
+  .apartments-description-1, .apartments-title {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .apartments-title {
+    grid-area: title;
+    font-family: "Playfair Display";
+    font-weight: 400;
+    color: #992727; }
+  .apartments-description-1 {
+    grid-area: desc1;
+    font-family: "Lato";
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0 15px; }
+
+.opinion {
+  width: 100%;
+  height: 70vh;
+  position: relative; }
+  .opinion-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  .opinion-title {
+    font-family: "Playfair Display";
+    font-weight: 400;
+    color: #992727;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    transform: translate(0, -10%);
+    color: #fff;
+    margin: 0 auto; }
+  .opinion-slider {
+    height: 100%;
+    margin: 0 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .opinion-slider .content {
+      color: #fff; }
+
+.contact {
+  background-color: #000;
+  padding: 50px 0;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .contact-title {
+    font-family: "Playfair Display";
+    font-weight: 400;
+    color: #992727;
+    color: #fff; }
+  .contact-details {
+    font-family: "Lato";
+    font-size: 12px;
+    font-weight: 400;
+    font-size: 14px; }
+  .contact-address {
+    margin: 20px 0; }
+  .contact-icons {
+    margin-top: 10px; }
+    .contact-icons .facebook-icon,
+    .contact-icons .instagram-icon {
+      width: 22px;
+      height: 22px; }
+
+.map {
+  widows: 100%;
+  height: 50vh; }
+  .map-link {
+    width: 100%;
+    height: 100%; }
+
+.footer {
+  width: 100%;
+  min-height: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #992727; }
+  .footer-copyrights {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400; }
