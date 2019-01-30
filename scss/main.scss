@@ -1,3 +1,4 @@
+@import 'config';
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext');
 $PlayfairDisplayFont: 'Playfair Display';
 $LatoFont: 'Lato';
@@ -67,7 +68,7 @@ ul {
         left: 0;
         width: 100%;
         .menu-bar {
-            transition: all 1s ease-in-out;
+            transition: background 0.5s ease-in-out;
             background: #000;
             position: fixed;
             top: 0;
@@ -79,8 +80,7 @@ ul {
             justify-content: flex-end;
             align-items: center;
             .menu-btn {
-                padding-right: 20px;
-                @include ease-out(1);
+                padding-right: 20px; // @include ease-out(1);
                 cursor: pointer;
                 .btn-line {
                     height: 3px;
@@ -106,7 +106,7 @@ ul {
         }
         .menu-nav {
             @include descriptionStyle;
-            transition: all 1s ease-in-out;
+            transition: background 0.5s ease-in-out;
             visibility: hidden;
             transform: translate3d(100%, 0, 0);
             background: #000;
@@ -122,7 +122,7 @@ ul {
                         text-decoration: none;
                         color: #fff;
                     }
-                    &:hover{
+                    &:hover {
                         background-color: $MainTitleColor;
                     }
                 }
@@ -159,52 +159,65 @@ ul {
 
 .aparthotel {
     width: 100%;
-    min-height: 100vh;
     margin: 30px 0;
-    display: grid;
-    grid-template-areas: "title img1" "img2 desc1" "desc2 img3";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    &-img-1,
-    &-img-2,
-    &-img-3 {
-        width: 100%;
-        height: 100%;
+    .left {
+        height: 100%;;
+        grid-area: left;
+        display: none;
     }
-    &-img-1 {
-        grid-area: img1;
-    }
-    &-img-2 {
-        grid-area: img2;
-    }
-    &-img-3 {
-        grid-area: img3;
-    }
-    &-title,
-    &-description {
-        @include centerText;
-    }
-    &-description {
-        grid-area: desc;
-        @include descriptionStyle;
-        padding: 0 15px;
-    }
-    &-description-1 {
-        grid-area: desc1;
-    }
-    &-description-2 {
-        grid-area: desc2;
-    }
-    &-title {
-        grid-area: title;
-        @include titleStyle;
+    .right {
+        grid-area: right;
+        display: grid;
+        
+        grid-template-areas: "title img2" "img3 desc1" "desc2 img4";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        .img-1,
+        .img-2,
+        .img-3,
+        .img-4 {
+            width: 100%;
+            height: 100%;
+        }
+        .img-1 {
+            display: none;
+            grid-area: img1;
+        }
+        .img-2 {
+            grid-area: img2;
+        }
+        .img-3 {
+            grid-area: img3;
+        }
+        .img-4 {
+            grid-area: img4;
+        }
+        .title,
+        .description {
+            @include centerText;
+        }
+        .description {
+            grid-area: desc;
+            @include descriptionStyle;
+            padding: 0 15px;
+        }
+        .description-1 {
+            grid-area: desc1;
+        }
+        .description-2 {
+            grid-area: desc2;
+        }
+        .title {
+            grid-area: title;
+            @include titleStyle;
+        }
     }
 }
 
 .apartments {
     margin: 30px 0;
     width: 100%;
-    min-height: 70vh;
+    min-height: 50vh;
     display: grid;
     grid-template-areas: "title img1" "img2 desc1";
     grid-template-columns: 1fr 1fr;
@@ -237,7 +250,7 @@ ul {
 
 .opinion {
     width: 100%;
-    height: 70vh;
+    height: 50vh;
     position: relative;
     &-background {
         width: 100%;
@@ -314,3 +327,5 @@ ul {
         font-weight: 400;
     }
 }
+
+@import 'media';

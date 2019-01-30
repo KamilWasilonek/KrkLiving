@@ -35,7 +35,7 @@ ul {
   left: 0;
   width: 100%; }
   .header-menu .menu-bar {
-    transition: all 1s ease-in-out;
+    transition: background 0.5s ease-in-out;
     background: #000;
     position: fixed;
     top: 0;
@@ -48,7 +48,6 @@ ul {
     align-items: center; }
     .header-menu .menu-bar .menu-btn {
       padding-right: 20px;
-      transition: all 1s ease-out;
       cursor: pointer; }
       .header-menu .menu-bar .menu-btn .btn-line {
         height: 3px;
@@ -66,7 +65,7 @@ ul {
     font-family: "Lato";
     font-size: 12px;
     font-weight: 400;
-    transition: all 1s ease-in-out;
+    transition: background 0.5s ease-in-out;
     visibility: hidden;
     transform: translate3d(100%, 0, 0);
     background: #000;
@@ -108,46 +107,58 @@ ul {
 
 .aparthotel {
   width: 100%;
-  min-height: 100vh;
-  margin: 30px 0;
-  display: grid;
-  grid-template-areas: "title img1" "img2 desc1" "desc2 img3";
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr; }
-  .aparthotel-img-1, .aparthotel-img-2, .aparthotel-img-3 {
-    width: 100%;
-    height: 100%; }
-  .aparthotel-img-1 {
-    grid-area: img1; }
-  .aparthotel-img-2 {
-    grid-area: img2; }
-  .aparthotel-img-3 {
-    grid-area: img3; }
-  .aparthotel-title, .aparthotel-description {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-  .aparthotel-description {
-    grid-area: desc;
-    font-family: "Lato";
-    font-size: 12px;
-    font-weight: 400;
-    padding: 0 15px; }
-  .aparthotel-description-1 {
-    grid-area: desc1; }
-  .aparthotel-description-2 {
-    grid-area: desc2; }
-  .aparthotel-title {
-    grid-area: title;
-    font-family: "Playfair Display";
-    font-weight: 400;
-    color: #992727; }
+  margin: 30px 0; }
+  .aparthotel .left {
+    height: 100%;
+    grid-area: left;
+    display: none; }
+  .aparthotel .right {
+    grid-area: right;
+    display: grid;
+    grid-template-areas: "title img2" "img3 desc1" "desc2 img4";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; }
+    .aparthotel .right .img-1,
+    .aparthotel .right .img-2,
+    .aparthotel .right .img-3,
+    .aparthotel .right .img-4 {
+      width: 100%;
+      height: 100%; }
+    .aparthotel .right .img-1 {
+      display: none;
+      grid-area: img1; }
+    .aparthotel .right .img-2 {
+      grid-area: img2; }
+    .aparthotel .right .img-3 {
+      grid-area: img3; }
+    .aparthotel .right .img-4 {
+      grid-area: img4; }
+    .aparthotel .right .title,
+    .aparthotel .right .description {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .aparthotel .right .description {
+      grid-area: desc;
+      font-family: "Lato";
+      font-size: 12px;
+      font-weight: 400;
+      padding: 0 15px; }
+    .aparthotel .right .description-1 {
+      grid-area: desc1; }
+    .aparthotel .right .description-2 {
+      grid-area: desc2; }
+    .aparthotel .right .title {
+      grid-area: title;
+      font-family: "Playfair Display";
+      font-weight: 400;
+      color: #992727; }
 
 .apartments {
   margin: 30px 0;
   width: 100%;
-  min-height: 70vh;
+  min-height: 50vh;
   display: grid;
   grid-template-areas: "title img1" "img2 desc1";
   grid-template-columns: 1fr 1fr;
@@ -178,7 +189,7 @@ ul {
 
 .opinion {
   width: 100%;
-  height: 70vh;
+  height: 50vh;
   position: relative; }
   .opinion-background {
     width: 100%;
@@ -255,3 +266,24 @@ ul {
     color: #fff;
     font-size: 13px;
     font-weight: 400; }
+
+@media (min-width: 430px) {
+  .aparthotel {
+    height: 100%;
+    min-height: 100vh; }
+    .aparthotel .right {
+      height: 100%; } }
+
+@media (min-width: 1200px) {
+  .aparthotel {
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 1.5fr 2.5fr;
+    grid-column-gap: 35px; }
+    .aparthotel .left {
+      display: block;
+      height: 100vh; }
+      .aparthotel .left .img-1 {
+        width: 100%;
+        height: 100%; } }

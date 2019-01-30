@@ -1,0 +1,22 @@
+$breakpoints: ( 
+    'mediaSm': ( min-width: 480px),
+    'mediaMd': ( min-width: 768px),
+    'mediaLg': ( min-width: 992px),
+    'mediaXl': ( min-width: 1200px)
+);
+
+@mixin respond-to($name) {
+    @if map-has-key($breakpoints,
+    $name) {
+        @media #{inspect(map-get($breakpoints, $name))} {
+            @content;
+        }
+    }
+    @else {
+        // @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "+"Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
+@mixin cssLock($min-size: 10, $max-size: 14, $min-width: 300, $max-width: 1200, $property:font-size, $unit: px) {
+    #{$property}: calc(#{$min-size}#{$unit} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}#{$unit}) / (#{$max-width} - #{$min-width})));
+}
