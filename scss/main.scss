@@ -14,11 +14,12 @@ $MainTitleColor: #992727;
     font-family: $PlayfairDisplayFont;
     font-weight: 400;
     color: $MainTitleColor;
+    @include cssLock(20,40,300,1200);
 }
 
 @mixin descriptionStyle {
     font-family: $LatoFont;
-    font-size: 12px;
+    @include cssLock(12,15,300,1200);
     font-weight: 400;
 }
 
@@ -50,6 +51,10 @@ ul {
     padding: 0;
 }
 
+p {
+    margin: 0;
+}
+
 .header {
     &-background {
         img {
@@ -67,6 +72,27 @@ ul {
         top: 0;
         left: 0;
         width: 100%;
+        .logo {
+            transition: opacity 0.5s ease;
+            img {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: auto;
+                height: 50px;
+            }
+        }
+        .contact-text {
+            @include descriptionStyle;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            position: fixed;
+            top:5px;
+            left: 40px;
+            @include cssLock(14,16,300,1200);
+            color: #fff;
+            text-align: center;
+        }
         .menu-bar {
             transition: background 0.5s ease-in-out;
             background: #000;
@@ -75,12 +101,12 @@ ul {
             left: 0;
             z-index: 3;
             width: 100%;
-            min-height: 50px;
+            height: 50px;
             display: flex;
             justify-content: flex-end;
             align-items: center;
             .menu-btn {
-                padding-right: 20px; // @include ease-out(1);
+                padding-right: 20px; 
                 cursor: pointer;
                 .btn-line {
                     height: 3px;
@@ -148,11 +174,11 @@ ul {
         }
         .title {
             line-height: 1.1;
-            font-size: 45px;
+            @include cssLock(45,60,300,1200);
         }
         .content {
             margin-top: 20px;
-            font-size: 20px;
+            @include cssLock(20,30,300,1200);
         }
     }
 }
@@ -206,6 +232,16 @@ ul {
             grid-area: title;
             @include titleStyle;
         }
+    }
+}
+
+.slider{
+    width: 100%;
+    margin: 30px 0;
+    height: 50vh;
+    img{
+        width: 100%;
+        height: 100%;
     }
 }
 
@@ -294,10 +330,11 @@ ul {
         .title {
             @include titleStyle;
             color: #fff;
+            @include cssLock(30,35,300,1200);
         }
         .details {
             @include descriptionStyle;
-            font-size: 14px;
+            @include cssLock(13,15,300,1200);
         }
         .address {
             margin: 20px 0;
@@ -312,8 +349,8 @@ ul {
         }
     }
     .map {
-        widows: 100%;
-        height: 50vh;
+        width: 100%;
+        height: 40vh;
         &-link {
             width: 100%;
             height: 100%;

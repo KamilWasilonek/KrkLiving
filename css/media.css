@@ -1,17 +1,54 @@
 @media (min-width: 480px) {
   .apartments-left {
-    min-height: 70vh; } }
+    min-height: 70vh; }
+  .header-menu .logo img {
+    left: 20px; }
+  .slider {
+    height: 70vh; } }
 
 @media (min-width: 768px) {
   .apartments-left {
-    min-height: 100vh; } }
+    min-height: 100vh; }
+  .header-menu .logo img {
+    left: 40px;
+    top: 0;
+    height: 70px; }
+  .header-menu .contact-text {
+    left: 100px; } }
 
 @media (min-width: 992px) {
+  .header-menu .menu-bar .menu-btn {
+    display: none; }
+  .header-menu .menu-nav {
+    width: auto;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+    margin: 0;
+    font-size: 16px;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    right: 30px;
+    background: rgba(0, 0, 0, 0); }
+    .header-menu .menu-nav ul {
+      z-index: 3;
+      display: flex;
+      justify-content: flex-end;
+      height: 50px; }
+      .header-menu .menu-nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px; }
+  .slider {
+    height: 90vh; }
   .contact {
     display: grid;
     grid-template-columns: 1fr 3fr; } }
 
 @media (min-width: 1200px) {
+  .header-menu .menu-nav {
+    right: 50px; }
   .aparthotel {
     height: 100vh;
     display: grid;
