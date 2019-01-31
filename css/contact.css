@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
+.contact-page-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; }
+
+.contact-page-title {
+  font-family: 'Playfair Display';
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+  font-size: calc(30px + (45 - 30) * ((100vw - 300px) / (1200 - 300)));
+  margin-top: 100px; }
+
+.contact-page-content {
+  display: flex;
+  width: 80%;
+  margin: 50px auto 30px auto;
+  padding-top: 50px; }
+  .contact-page-content .message input[type=text],
+  .contact-page-content .message select,
+  .contact-page-content .message textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    resize: none;
+    background-color: #f3f3f3;
+    color: #262626;
+    font-size: 18px; }
+  .contact-page-content .message ::placeholder {
+    color: #262626;
+    font-size: 15px; }
+  .contact-page-content .message input[type=submit] {
+    background-color: #992727;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; }
+  .contact-page-content .message input[type=submit]:hover {
+    background-color: #5DB3FF; }
+  .contact-page-content .message .info-label {
+    margin-top: 15px; }
+  .contact-page-content .message .loading-icon {
+    width: 60px; }
+  .contact-page-content .message .form-error {
+    color: #fff;
+    font-weight: 700;
+    font-size: 17px;
+    background-color: #1C1C1C;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    text-align: center; }
+  .contact-page-content .message .success-info {
+    color: #fff;
+    font-weight: 700;
+    font-size: 17px;
+    background-color: #1C1C1C;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    text-align: center; }

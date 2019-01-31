@@ -6,7 +6,7 @@ var texts = [
 
     'This was a lovely modern stylist apartment. Bed was super comfortable. Bathroom clean and well designed.General decor was very nice. <br> <br>Thumpi, booking.com']
 
-var time = 3000;
+var time = 7000;
 
 function changeText() {
     if (i < texts.length - 1) {
@@ -19,5 +19,4 @@ function changeText() {
 }
 
 window.onload = changeText;
-
 

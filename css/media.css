@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
 @media (min-width: 480px) {
   .apartments-left {
     min-height: 70vh; }
@@ -14,7 +15,9 @@
     top: 0;
     height: 70px; }
   .header-menu .contact-text {
-    left: 100px; } }
+    left: 100px; }
+  .opinion-slider .content {
+    width: 50%; } }
 
 @media (min-width: 992px) {
   .header-menu .menu-bar .menu-btn {
@@ -62,7 +65,9 @@
         height: 100%; }
   .apartments {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     grid-column-gap: 30px; }
     .apartments-right {
-      display: block; } }
+      display: block; }
+  .opinion {
+    height: 50vh; } }

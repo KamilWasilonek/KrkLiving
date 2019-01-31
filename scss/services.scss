@@ -1,0 +1,45 @@
+@import 'config';
+.services {
+    padding-top: 50px;
+    min-height: calc(100vh - 70px);
+    @include centerText();
+    flex-direction: column;
+    .service {
+        width: 100%;
+        img {
+            width: 100%;
+        }
+        .text {
+            padding: 20px 0 30px 0;
+            @include centerText;
+            // display: flex;
+            // justify-content: center;
+            // align-items: center;
+            flex-direction: column;
+            width: 80%;
+            margin: 0 auto;
+            .title {
+                @include titleStyle;
+                padding-bottom: 10px;
+                @include cssLock(30,
+                40,
+                300,
+                1200);
+            }
+            .description {
+                @include descriptionStyle;
+                @include cssLock(13,
+                16,
+                300,
+                1200);
+            }
+            .description-1{
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.footer {
+    height: 20px;
+}

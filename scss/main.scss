@@ -1,27 +1,8 @@
 @import 'config';
-@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext');
 $PlayfairDisplayFont: 'Playfair Display';
 $LatoFont: 'Lato';
 $MainTitleColor: #992727;
-@mixin centerText {
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-@mixin titleStyle {
-    font-family: $PlayfairDisplayFont;
-    font-weight: 400;
-    color: $MainTitleColor;
-    @include cssLock(20,40,300,1200);
-}
-
-@mixin descriptionStyle {
-    font-family: $LatoFont;
-    @include cssLock(12,15,300,1200);
-    font-weight: 400;
-}
 
 @mixin ease-out($time: 1.0) {
     transition: all #{$time}s ease-out;
@@ -87,9 +68,12 @@ p {
             opacity: 0;
             transition: opacity 0.5s ease;
             position: fixed;
-            top:5px;
+            top: 5px;
             left: 40px;
-            @include cssLock(14,16,300,1200);
+            @include cssLock(14,
+            16,
+            300,
+            1200);
             color: #fff;
             text-align: center;
         }
@@ -106,7 +90,7 @@ p {
             justify-content: flex-end;
             align-items: center;
             .menu-btn {
-                padding-right: 20px; 
+                padding-right: 20px;
                 cursor: pointer;
                 .btn-line {
                     height: 3px;
@@ -174,11 +158,17 @@ p {
         }
         .title {
             line-height: 1.1;
-            @include cssLock(45,60,300,1200);
+            @include cssLock(45,
+            60,
+            300,
+            1200);
         }
         .content {
             margin-top: 20px;
-            @include cssLock(20,30,300,1200);
+            @include cssLock(20,
+            30,
+            300,
+            1200);
         }
     }
 }
@@ -235,11 +225,11 @@ p {
     }
 }
 
-.slider{
+.slider {
     width: 100%;
     margin: 30px 0;
     height: 50vh;
-    img{
+    img {
         width: 100%;
         height: 100%;
     }
@@ -290,7 +280,7 @@ p {
 
 .opinion {
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     position: relative;
     &-background {
         width: 100%;
@@ -303,13 +293,21 @@ p {
     &-title {
         @include titleStyle;
         position: absolute;
-        top: 10%;
+        margin-left: auto;
+        margin-right: auto;
         left: 0;
-        transform: translate(0, -10%);
+        right: 0;
+        top: 5%;
+        text-align: center;
+        // padding-top: 40px;
         color: #fff;
         margin: 0 auto;
     }
     &-slider {
+        @include cssLock(14,
+        18,
+        300,
+        1200);
         height: 100%;
         margin: 0 40px;
         @include centerText;
@@ -330,11 +328,17 @@ p {
         .title {
             @include titleStyle;
             color: #fff;
-            @include cssLock(30,35,300,1200);
+            @include cssLock(30,
+            35,
+            300,
+            1200);
         }
         .details {
             @include descriptionStyle;
-            @include cssLock(13,15,300,1200);
+            @include cssLock(13,
+            15,
+            300,
+            1200);
         }
         .address {
             margin: 20px 0;
@@ -365,7 +369,10 @@ p {
     background-color: $MainTitleColor;
     &-copyrights {
         color: #fff;
-        font-size: 13px;
+        @include cssLock(13,
+        16,
+        300,
+        1200);
         font-weight: 400;
     }
 }
