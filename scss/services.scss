@@ -12,9 +12,6 @@
         .text {
             padding: 20px 0 30px 0;
             @include centerText;
-            // display: flex;
-            // justify-content: center;
-            // align-items: center;
             flex-direction: column;
             width: 80%;
             margin: 0 auto;

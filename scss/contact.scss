@@ -1,5 +1,10 @@
 @import 'config';
 .contact-page {
+    background-image: url("../images/contact.jpg") ;
+    background-size: 100% 100vh;
+    background-attachment: fixed;
+    padding-bottom: 20px;
+    min-height: calc(100vh - 20px);
     &-bg {
         width: 100%;
         height: 100%;
@@ -13,21 +18,21 @@
         font-weight: 400;
         text-align: center;
         color: #fff;
-        @include cssLock(30, 45);
-        margin-top: 100px;
+        @include cssLock(40,
+        45);
+        padding-top: 100px;
     }
     &-content {
-        display: flex;
-        // grid-template-columns: 1fr 1fr;
-        // grid-gap: 100px;
-        // grid-auto-rows: auto;
         width: 80%;
-        margin: 50px auto 30px auto;
+        margin: 0 auto;
         padding-top: 50px;
+        @include descriptionStyle;
         .message {
+            margin-bottom: 30px;
             input[type=text],
             select,
             textarea {
+                @include descriptionStyle;
                 width: 100%;
                 padding: 12px;
                 border: 1px solid #ccc;
@@ -41,7 +46,7 @@
             }
             ::placeholder {
                 color: #262626;
-                font-size: 15px;
+                @include cssLock(13,15);
             }
             input[type=submit] {
                 background-color: #992727;
@@ -49,15 +54,18 @@
                 padding: 12px 20px;
                 border: none;
                 border-radius: 4px;
+                font-size: 14px;
                 cursor: pointer;
             }
             input[type=submit]:hover {
-                background-color: #5DB3FF;
+                background-color: #000;
             }
             .info-label {
-                margin-top: 15px;
+                @include cssLock(13,15);
+                color: #fff;
             }
             .loading-icon {
+                display: none;
                 width: 60px;
             }
             .form-error {
@@ -79,18 +87,29 @@
                 text-align: center;
             }
         }
-        .details{
-            // display: flex;
-            // flex-direction: column;
-            // color: #fff;
-            // line-height: 1.3;
-            // padding: 10px;
-            // background: rgba(0, 0, 0, 0.8);
-            // width: auto;
-            
-            h2{
-
+        .details {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            .title{
+                @include titleStyle;
+                @include cssLock(25, 30);
+                color: #fff;
+                padding-bottom: 20px;
+            }
+            .description{
+                padding-bottom: 10px;
+            }
+            .map-link{
+                width: 100%;
+                margin-top: 20px;
             }
         }
     }
 }
+
+@import 'media';

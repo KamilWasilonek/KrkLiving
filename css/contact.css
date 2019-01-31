@@ -1,67 +1,228 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
-.contact-page-bg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1; }
-
-.contact-page-title {
-  font-family: 'Playfair Display';
-  font-weight: 400;
-  text-align: center;
-  color: #fff;
-  font-size: calc(30px + (45 - 30) * ((100vw - 300px) / (1200 - 300)));
-  margin-top: 100px; }
-
-.contact-page-content {
-  display: flex;
-  width: 80%;
-  margin: 50px auto 30px auto;
-  padding-top: 50px; }
-  .contact-page-content .message input[type=text],
-  .contact-page-content .message select,
-  .contact-page-content .message textarea {
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
+.contact-page {
+  background-image: url("../images/contact.jpg");
+  background-size: 100% 100vh;
+  background-attachment: fixed;
+  padding-bottom: 20px;
+  min-height: calc(100vh - 20px); }
+  .contact-page-bg {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    resize: none;
-    background-color: #f3f3f3;
-    color: #262626;
-    font-size: 18px; }
-  .contact-page-content .message ::placeholder {
-    color: #262626;
-    font-size: 15px; }
-  .contact-page-content .message input[type=submit] {
-    background-color: #992727;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+  .contact-page-title {
+    font-family: 'Playfair Display';
+    font-weight: 400;
+    text-align: center;
     color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer; }
-  .contact-page-content .message input[type=submit]:hover {
-    background-color: #5DB3FF; }
-  .contact-page-content .message .info-label {
-    margin-top: 15px; }
-  .contact-page-content .message .loading-icon {
-    width: 60px; }
-  .contact-page-content .message .form-error {
-    color: #fff;
-    font-weight: 700;
-    font-size: 17px;
-    background-color: #1C1C1C;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
-    text-align: center; }
-  .contact-page-content .message .success-info {
-    color: #fff;
-    font-weight: 700;
-    font-size: 17px;
-    background-color: #1C1C1C;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
-    text-align: center; }
+    font-size: calc(40px + (45 - 40) * ((100vw - 300px) / (1200 - 300)));
+    padding-top: 100px; }
+  .contact-page-content {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 50px;
+    font-family: "Lato";
+    font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
+    font-weight: 400; }
+    .contact-page-content .message {
+      margin-bottom: 30px; }
+      .contact-page-content .message input[type=text],
+      .contact-page-content .message select,
+      .contact-page-content .message textarea {
+        font-family: "Lato";
+        font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
+        font-weight: 400;
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        resize: none;
+        background-color: #f3f3f3;
+        color: #262626;
+        font-size: 18px; }
+      .contact-page-content .message ::placeholder {
+        color: #262626;
+        font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1200 - 300))); }
+      .contact-page-content .message input[type=submit] {
+        background-color: #992727;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer; }
+      .contact-page-content .message input[type=submit]:hover {
+        background-color: #000; }
+      .contact-page-content .message .info-label {
+        font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1200 - 300)));
+        color: #fff; }
+      .contact-page-content .message .loading-icon {
+        display: none;
+        width: 60px; }
+      .contact-page-content .message .form-error {
+        color: #fff;
+        font-weight: 700;
+        font-size: 17px;
+        background-color: #1C1C1C;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 5px;
+        text-align: center; }
+      .contact-page-content .message .success-info {
+        color: #fff;
+        font-weight: 700;
+        font-size: 17px;
+        background-color: #1C1C1C;
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 5px;
+        text-align: center; }
+    .contact-page-content .details {
+      display: flex;
+      flex-direction: column;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 5px;
+      padding: 20px;
+      text-align: center; }
+      .contact-page-content .details .title {
+        font-family: "Playfair Display";
+        font-weight: 400;
+        color: #992727;
+        font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300)));
+        font-size: calc(25px + (30 - 25) * ((100vw - 300px) / (1200 - 300)));
+        color: #fff;
+        padding-bottom: 20px; }
+      .contact-page-content .details .description {
+        padding-bottom: 10px; }
+      .contact-page-content .details .map-link {
+        width: 100%;
+        margin-top: 20px; }
+
+@media (min-width: 480px) {
+  .apartments-left {
+    min-height: 70vh; }
+  .header-menu .logo img {
+    left: 20px; }
+  .slider {
+    height: 70vh; }
+  .contact-page-content .map-link {
+    height: 250px; } }
+
+@media (min-width: 768px) {
+  .apartments-left {
+    min-height: 100vh; }
+  .header-menu .logo img {
+    left: 40px;
+    top: 0;
+    height: 70px; }
+  .header-menu .contact-text {
+    left: 100px; }
+  .opinion-slider .content {
+    width: 50%; }
+  .services {
+    padding-top: 80px;
+    min-height: calc(100vh - 100px); }
+    .services .service {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-auto-rows: 50vh; }
+      .services .service img {
+        width: 50%;
+        height: 100%; }
+    .services .service-1 img,
+    .services .service-2 img,
+    .services .service-3 img {
+      grid-area: img; }
+    .services .service-1 .text,
+    .services .service-2 .text,
+    .services .service-3 .text {
+      grid-area: text1; }
+    .services .service-1 {
+      grid-template-areas: 'img text1'; }
+    .services .service-2 {
+      grid-template-areas: 'text1 img'; }
+    .services .service-3 {
+      grid-template-areas: 'img text1'; }
+  .contact-page-content {
+    width: 80%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 50px;
+    margin: 0 auto; }
+    .contact-page-content .details {
+      text-align: left;
+      align-self: flex-start; }
+    .contact-page-content .map-link {
+      height: 200px; } }
+
+@media (min-width: 992px) {
+  .header-menu .menu-bar .menu-btn {
+    display: none; }
+  .header-menu .menu-nav {
+    width: auto;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+    margin: 0;
+    font-size: 16px;
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    right: 30px;
+    background: rgba(0, 0, 0, 0); }
+    .header-menu .menu-nav ul {
+      z-index: 3;
+      display: flex;
+      justify-content: flex-end;
+      height: 50px; }
+      .header-menu .menu-nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px; }
+  .slider {
+    height: 90vh; }
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 3fr; }
+    .contact .map {
+      height: auto; }
+  .contact-page-content {
+    width: 80%;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr  1fr;
+    grid-column-gap: 50px;
+    margin: 0 auto; }
+    .contact-page-content .details {
+      text-align: left;
+      align-self: flex-start; }
+    .contact-page-content .map-link {
+      height: 200px; } }
+
+@media (min-width: 1200px) {
+  .header-menu .menu-nav {
+    right: 50px; }
+  .aparthotel {
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 1.5fr 2.5fr;
+    grid-column-gap: 35px; }
+    .aparthotel-left {
+      display: block; }
+      .aparthotel-left .img-1 {
+        width: 100%;
+        height: 100%; }
+  .apartments {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-column-gap: 30px; }
+    .apartments-right {
+      display: block; }
+  .opinion {
+    height: 50vh; } }

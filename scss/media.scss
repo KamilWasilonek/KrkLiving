@@ -20,6 +20,13 @@
     .slider {
         height: 70vh;
     }
+    .contact-page{
+        &-content{
+            .map-link{
+                height: 250px;
+            }
+        }
+    }
 }
 
 // min-width: 768px
@@ -47,6 +54,65 @@
         &-slider {
             .content {
                 width: 50%;
+            }
+        }
+    }
+    .services {
+        padding-top: 80px;
+        min-height: calc(100vh - 100px);
+        .service {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: 50vh;
+            img {
+                width: 50%;
+                height: 100%;
+            }
+            
+        }
+
+        .service-1,
+        .service-2,
+        .service-3{
+            img{
+                grid-area: img;
+            }
+            .text{
+                grid-area: text1;
+            }
+        }
+
+        .service-1{
+            grid-template-areas: 'img text1';
+        }
+
+        .service-2{
+            grid-template-areas: 'text1 img';
+        }
+
+        .service-3{
+            grid-template-areas: 'img text1';
+        }
+    }
+    .contact-page{
+        &-content{
+            width: 80%;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 50px;
+            margin: 0 auto;
+            // display: flex;
+            // justify-content: center;
+            .message{
+            }
+            .details{
+                text-align: left;
+                // align-self: auto;
+                align-self: flex-start;
+            }
+            .map-link{
+                height: 200px;
             }
         }
     }
@@ -93,6 +159,31 @@
     .contact {
         display: grid;
         grid-template-columns: 1fr 3fr;
+        .map{
+            height: auto;
+        }
+    }
+    .contact-page{
+        &-content{
+            width: 80%;
+            margin: 0;
+            display: grid;
+            grid-template-columns: 1fr  1fr;
+            grid-column-gap: 50px;
+            margin: 0 auto;
+            // display: flex;
+            // justify-content: center;
+            .message{
+            }
+            .details{
+                text-align: left;
+                // align-self: auto;
+                align-self: flex-start;
+            }
+            .map-link{
+                height: 200px;
+            }
+        }
     }
 }
 
@@ -129,5 +220,5 @@
     }
     .opinion {
         height: 50vh;
-    }  
+    }
 }
