@@ -117,8 +117,8 @@ p {
         .menu-nav {
             @include descriptionStyle;
             transition: background 0.5s ease-in-out;
-            // display: none;
-            visibility: hidden;
+            display: none;
+            // visibility: hidden;
             transform: translate3d(100%, 0, 0);
             background: #000;
             margin-top: 50px;
@@ -139,8 +139,8 @@ p {
                 }
             }
             &.show {
-                // display: block;
-                visibility: visible;
+                display: block;
+                // visibility: visible;
                 transform: translate3d(0, 0, 0);
             }
         }
