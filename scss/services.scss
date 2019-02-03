@@ -28,6 +28,7 @@
                 margin-bottom: 10px;
             }
             .price-table {
+                @include cssLock(13, 16, 300, 1200);
                 margin-top: 10px;
                 border: solid 1px #DDEEEE;
                 border-collapse: collapse;
