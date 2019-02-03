@@ -1,24 +1,3 @@
-.header {
-    .contact-text {
-        opacity: 1;
-    } // height: 50vh;
-    // &-background {
-    //     img {
-    //         width: 100%;
-    //         max-width: 100%;
-    //         height: 50vh;
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         z-index: -1;
-    //     }
-    // }
-    // &-description {
-    //     height: 100%;
-    // }
-}
-
-
 .reservation {
     width: 100%;
     margin: 0 auto;
@@ -28,8 +7,4 @@
         width: 100%;
         height: 100vh;
     }
-}
-
-.reservation .reservation-engine .ng-scope .ng-isolate-scope .footer{
-    display: none;
 }

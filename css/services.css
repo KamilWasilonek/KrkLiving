@@ -34,6 +34,24 @@
         font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1200 - 300))); }
       .services .service .text .description-1 {
         margin-bottom: 10px; }
+      .services .service .text .price-table {
+        margin-top: 10px;
+        border: solid 1px #DDEEEE;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%; }
+        .services .service .text .price-table thead th {
+          background-color: #992727;
+          border: solid 1px #DDEEEE;
+          color: #fff;
+          font-weight: 400;
+          padding: 10px;
+          text-align: center; }
+        .services .service .text .price-table tbody td {
+          border: solid 1px #DDEEEE;
+          color: #333;
+          padding: 10px;
+          text-shadow: 1px 1px 1px #fff; }
 
 .footer {
   height: 20px; }

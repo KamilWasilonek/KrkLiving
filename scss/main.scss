@@ -2,8 +2,6 @@
 $PlayfairDisplayFont: 'Playfair Display';
 $LatoFont: 'Lato';
 $MainTitleColor: #992727;
-
-
 @mixin ease-out($time: 1.0) {
     transition: all #{$time}s ease-out;
 }
@@ -53,6 +51,7 @@ p {
         top: 0;
         left: 0;
         width: 100%;
+        z-index: 3;
         .logo {
             transition: opacity 0.5s ease;
             img {
@@ -69,11 +68,8 @@ p {
             transition: opacity 0.5s ease;
             position: fixed;
             top: 5px;
-            left: 40px;
-            @include cssLock(14,
-            16,
-            300,
-            1200);
+            left: 25px;
+            @include cssLock(14, 16, 300, 1200);
             color: #000;
             text-align: center;
         }
@@ -116,12 +112,9 @@ p {
         }
         .menu-nav {
             @include descriptionStyle;
-            background: rgba(0,0,0,0);
             transition: background 0.5s ease-in-out;
-            // display: none;
-            visibility: hidden;
-            transform: translate3d(100%, 0, 0);
-            background: #000;
+            display: none; 
+            background: #fff;
             margin-top: 50px;
             width: 100%;
             font-size: 16px;
@@ -134,16 +127,16 @@ p {
                         text-decoration: none;
                         color: #000;
                     }
-                    &:hover {
-                        background-color: $MainTitleColor;
+                }
+                li:hover {
+                    background-color: $MainTitleColor;
+                    a {
                         color: #fff;
                     }
                 }
             }
             &.show {
-                // display: block;
-                visibility: visible;
-                transform: translate3d(0, 0, 0);
+                display: block; 
             }
         }
     }
@@ -162,17 +155,11 @@ p {
         }
         .title {
             line-height: 1.1;
-            @include cssLock(45,
-            60,
-            300,
-            1200);
+            @include cssLock(45, 60, 300, 1200);
         }
         .content {
             margin-top: 20px;
-            @include cssLock(20,
-            30,
-            300,
-            1200);
+            @include cssLock(20, 30, 300, 1200);
         }
     }
 }
@@ -304,15 +291,11 @@ p {
         right: 0;
         top: 5%;
         text-align: center;
-        // padding-top: 40px;
         color: #fff;
         margin: 0 auto;
     }
     &-slider {
-        @include cssLock(12,
-        18,
-        300,
-        1200);
+        @include cssLock(12, 18, 300, 1200);
         height: 100%;
         margin: 0 40px;
         @include centerText;
@@ -333,27 +316,25 @@ p {
         .title {
             @include titleStyle;
             color: #fff;
-            @include cssLock(30,
-            35,
-            300,
-            1200);
+            @include cssLock(30, 35, 300, 1200);
         }
         .details {
             @include descriptionStyle;
-            @include cssLock(12,
-            15,
-            300,
-            1200);
+            @include cssLock(12, 15, 300, 1200);
         }
         .address {
             margin: 20px 0;
         }
         .icons {
             margin-top: 10px;
+            a{
+                text-decoration: none;
+            }
             .facebook-icon,
             .instagram-icon {
                 width: 22px;
                 height: 22px;
+                padding: 5px;
             }
         }
     }
@@ -374,10 +355,7 @@ p {
     background-color: $MainTitleColor;
     &-copyrights {
         color: #fff;
-        @include cssLock(13,
-        16,
-        300,
-        1200);
+        @include cssLock(13, 16, 300, 1200);
         font-weight: 400;
     }
 }

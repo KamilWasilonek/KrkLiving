@@ -4,6 +4,8 @@
     min-height: 70vh; }
   .header-menu .logo img {
     left: 20px; }
+  .header-menu .contact-text {
+    left: 40px; }
   .slider {
     height: 70vh; }
   .contact-page-content .map-link {
@@ -14,10 +16,9 @@
     min-height: 100vh; }
   .header-menu .logo img {
     left: 40px;
-    top: 0;
-    height: 70px; }
+    top: 0; }
   .header-menu .contact-text {
-    left: 100px; }
+    left: 70px; }
   .opinion-slider .content {
     width: 50%; }
   .services {
@@ -61,16 +62,14 @@
   .header-menu .menu-bar .menu-btn {
     display: none; }
   .header-menu .menu-nav {
+    display: block;
     width: auto;
-    visibility: visible;
-    transform: translate3d(0, 0, 0);
     margin: 0;
     font-size: 16px;
     z-index: 3;
     position: fixed;
     top: 0;
-    right: 30px;
-    background: rgba(0, 0, 0, 0); }
+    right: 30px; }
     .header-menu .menu-nav ul {
       z-index: 3;
       display: flex;

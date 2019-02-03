@@ -37,7 +37,8 @@ p {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 3; }
   .header-menu .logo {
     transition: opacity 0.5s ease; }
     .header-menu .logo img {
@@ -54,7 +55,7 @@ p {
     transition: opacity 0.5s ease;
     position: fixed;
     top: 5px;
-    left: 40px;
+    left: 25px;
     font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1200 - 300)));
     color: #000;
     text-align: center; }
@@ -89,11 +90,9 @@ p {
     font-family: "Lato";
     font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
     font-weight: 400;
-    background: rgba(0, 0, 0, 0);
     transition: background 0.5s ease-in-out;
-    visibility: hidden;
-    transform: translate3d(100%, 0, 0);
-    background: #000;
+    display: none;
+    background: #fff;
     margin-top: 50px;
     width: 100%;
     font-size: 16px; }
@@ -105,12 +104,12 @@ p {
         .header-menu .menu-nav ul li a {
           text-decoration: none;
           color: #000; }
-        .header-menu .menu-nav ul li:hover {
-          background-color: #992727;
+      .header-menu .menu-nav ul li:hover {
+        background-color: #992727; }
+        .header-menu .menu-nav ul li:hover a {
           color: #fff; }
     .header-menu .menu-nav.show {
-      visibility: visible;
-      transform: translate3d(0, 0, 0); }
+      display: block; }
 
 .header-description {
   height: 100vh;
@@ -291,10 +290,13 @@ p {
     margin: 20px 0; }
   .contact-info .icons {
     margin-top: 10px; }
+    .contact-info .icons a {
+      text-decoration: none; }
     .contact-info .icons .facebook-icon,
     .contact-info .icons .instagram-icon {
       width: 22px;
-      height: 22px; }
+      height: 22px;
+      padding: 5px; }
 
 .contact .map {
   width: 100%;
@@ -321,6 +323,8 @@ p {
     min-height: 70vh; }
   .header-menu .logo img {
     left: 20px; }
+  .header-menu .contact-text {
+    left: 40px; }
   .slider {
     height: 70vh; }
   .contact-page-content .map-link {
@@ -333,7 +337,7 @@ p {
     left: 40px;
     top: 0; }
   .header-menu .contact-text {
-    left: 100px; }
+    left: 70px; }
   .opinion-slider .content {
     width: 50%; }
   .services {
@@ -377,16 +381,14 @@ p {
   .header-menu .menu-bar .menu-btn {
     display: none; }
   .header-menu .menu-nav {
+    display: block;
     width: auto;
-    visibility: visible;
-    transform: translate3d(0, 0, 0);
     margin: 0;
     font-size: 16px;
     z-index: 3;
     position: fixed;
     top: 0;
-    right: 30px;
-    background: rgba(0, 0, 0, 0); }
+    right: 30px; }
     .header-menu .menu-nav ul {
       z-index: 3;
       display: flex;

@@ -18,20 +18,39 @@
             .title {
                 @include titleStyle;
                 padding-bottom: 10px;
-                @include cssLock(30,
-                40,
-                300,
-                1200);
+                @include cssLock(30, 40, 300, 1200);
             }
             .description {
                 @include descriptionStyle;
-                @include cssLock(13,
-                16,
-                300,
-                1200);
+                @include cssLock(13, 16, 300, 1200);
             }
-            .description-1{
+            .description-1 {
                 margin-bottom: 10px;
+            }
+            .price-table {
+                margin-top: 10px;
+                border: solid 1px #DDEEEE;
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+                thead {
+                    th {
+                        background-color: $MainTitleColor;
+                        border: solid 1px #DDEEEE;
+                        color: #fff;
+                        font-weight: 400;
+                        padding: 10px;
+                        text-align: center;
+                    }
+                }
+                tbody {
+                    td {
+                        border: solid 1px #DDEEEE;
+                        color: #333;
+                        padding: 10px;
+                        text-shadow: 1px 1px 1px #fff;
+                    }
+                }
             }
         }
     }

@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $('#loading-icon').hide();
+    // $('#loading-icon').hide();
 
     $('#name').focusout(function () {
         checkName();
@@ -46,7 +46,7 @@ $(document).ready(function () {
 
             $.ajax({
                 type: 'POST',
-                url: $('#contact-form').attr('action'),
+                url: $('#form').attr('action'),
                 data: 'name=' + name + '&number=' + number + '&email=' + email + '&topic=' + topic + '&message=' + message +
                     '&submit=' + submit,
 

@@ -45,7 +45,7 @@
         resize: none;
         background-color: #f3f3f3;
         color: #262626;
-        font-size: 18px; }
+        font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1200 - 300))); }
       .contact-page-content .message ::placeholder {
         color: #262626;
         font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1200 - 300))); }
@@ -58,7 +58,8 @@
         font-size: 14px;
         cursor: pointer; }
       .contact-page-content .message input[type=submit]:hover {
-        background-color: #000; }
+        background-color: #fff;
+        color: #000; }
       .contact-page-content .message .info-label {
         font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1200 - 300)));
         color: #000; }
@@ -67,7 +68,8 @@
         width: 60px; }
       .contact-page-content .message .form-error {
         color: #fff;
-        font-weight: 700;
+        font-weight: 400;
+        margin-bottom: 10px;
         font-size: 17px;
         background-color: #1C1C1C;
         background-color: rgba(0, 0, 0, 0.8);
@@ -75,12 +77,15 @@
         text-align: center; }
       .contact-page-content .message .success-info {
         color: #fff;
-        font-weight: 700;
+        font-weight: 400;
         font-size: 17px;
         background-color: #1C1C1C;
         background-color: rgba(0, 0, 0, 0.8);
         border-radius: 5px;
         text-align: center; }
+      .contact-page-content .message .accept {
+        display: flex;
+        height: 50px; }
     .contact-page-content .details {
       display: flex;
       flex-direction: column;
@@ -108,6 +113,8 @@
     min-height: 70vh; }
   .header-menu .logo img {
     left: 20px; }
+  .header-menu .contact-text {
+    left: 40px; }
   .slider {
     height: 70vh; }
   .contact-page-content .map-link {
@@ -118,10 +125,9 @@
     min-height: 100vh; }
   .header-menu .logo img {
     left: 40px;
-    top: 0;
-    height: 70px; }
+    top: 0; }
   .header-menu .contact-text {
-    left: 100px; }
+    left: 70px; }
   .opinion-slider .content {
     width: 50%; }
   .services {
@@ -165,16 +171,14 @@
   .header-menu .menu-bar .menu-btn {
     display: none; }
   .header-menu .menu-nav {
+    display: block;
     width: auto;
-    visibility: visible;
-    transform: translate3d(0, 0, 0);
     margin: 0;
     font-size: 16px;
     z-index: 3;
     position: fixed;
     top: 0;
-    right: 30px;
-    background: rgba(0, 0, 0, 0); }
+    right: 30px; }
     .header-menu .menu-nav ul {
       z-index: 3;
       display: flex;
