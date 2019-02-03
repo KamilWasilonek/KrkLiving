@@ -42,11 +42,12 @@ p {
   .header-menu .logo {
     transition: opacity 0.5s ease; }
     .header-menu .logo img {
+      padding: 3px 0;
       position: fixed;
       left: 0;
       top: 0;
       width: auto;
-      height: 50px; }
+      height: 44px; }
   .header-menu .contact-text {
     font-family: "Lato";
     font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
