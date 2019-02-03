@@ -1,5 +1,5 @@
 @import 'config';
-@media(min-width: 430px) {}
+
 
 // min-width: 480px
 @include respond-to(mediaSm) {
@@ -52,6 +52,11 @@
             }
         }
     }
+
+    .flexslider{
+        width: 80%;
+    }
+
     .opinion {
         &-slider {
             .content {
@@ -145,6 +150,12 @@
             }
         }
     }
+
+    .flexslider{
+        width: 75%;
+        height: 550px;
+    }
+
     .slider {
         height: 90vh;
     }
@@ -213,7 +224,7 @@
         }
     }
     .opinion {
-        height: 50vh;
+        height: 65vh;
     }
     .contact-page {
         &-content {
@@ -222,4 +233,34 @@
             }
         }
     }
+}
+
+@media(min-width: 1600px) {
+    .flexslider{
+        width: 75%;
+        height: 650px;
+    }
+}
+
+@media(max-width: 767px) and (orientation: landscape){
+    .aparthotel{
+        height:200vh;
+    }
+
+.apartments{
+    &-left{
+        height: 100vh;
+    }
+}
+
+.opinion{
+    height: 80vh;
+}
+
+.contact{
+    .map{
+        height: 80vh;
+    }
+}
+
 }

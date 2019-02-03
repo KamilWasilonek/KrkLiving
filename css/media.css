@@ -19,6 +19,8 @@
     top: 0; }
   .header-menu .contact-text {
     left: 70px; }
+  .flexslider {
+    width: 80%; }
   .opinion-slider .content {
     width: 50%; }
   .services {
@@ -80,6 +82,9 @@
         justify-content: center;
         align-items: center;
         padding: 10px; }
+  .flexslider {
+    width: 75%;
+    height: 550px; }
   .slider {
     height: 90vh; }
   .contact {
@@ -125,6 +130,21 @@
     .apartments-right {
       display: block; }
   .opinion {
-    height: 50vh; }
+    height: 65vh; }
   .contact-page-content .map-link {
     height: 300px; } }
+
+@media (min-width: 1600px) {
+  .flexslider {
+    width: 75%;
+    height: 650px; } }
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .aparthotel {
+    height: 200vh; }
+  .apartments-left {
+    height: 100vh; }
+  .opinion {
+    height: 80vh; }
+  .contact .map {
+    height: 80vh; } }
