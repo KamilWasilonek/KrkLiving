@@ -29,6 +29,7 @@
             }
             .price-table {
                 @include cssLock(13, 16, 300, 1200);
+                font-family: $LatoFont;
                 margin-top: 10px;
                 border: solid 1px #DDEEEE;
                 border-collapse: collapse;

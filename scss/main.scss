@@ -113,7 +113,7 @@ p {
         .menu-nav {
             @include descriptionStyle;
             transition: background 0.5s ease-in-out;
-            display: none; 
+            display: none;
             background: #fff;
             margin-top: 50px;
             width: 100%;
@@ -136,7 +136,7 @@ p {
                 }
             }
             &.show {
-                display: block; 
+                display: block;
             }
         }
     }
@@ -216,6 +216,47 @@ p {
     }
 }
 
+/////////////////////////////
+.flexslider {
+    position: relative;
+    width: 95%;
+    margin: 30px auto;
+    .slides {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        li {
+            height: 100%;
+            width: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .flex-caption {
+        position: absolute;
+        width: 96%;
+        padding: 2%;
+        left: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, .5);
+        color: #fff;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+        font-size: 14px;
+        line-height: 18px;
+        @include descriptionStyle;
+        span{
+            @include titleStyle;
+            color: #fff;
+        }
+    }
+    .flex-control-paging{
+        display: none;
+    }
+}
+
+//////////////////////
 .slider {
     width: 100%;
     margin: 30px 0;
@@ -327,13 +368,13 @@ p {
         }
         .icons {
             margin-top: 10px;
-            a{
+            a {
                 text-decoration: none;
             }
             .facebook-icon,
             .instagram-icon {
-                width: 22px;
-                height: 22px;
+                width: 20px;
+                height: 20px;
                 padding: 5px;
             }
         }
@@ -355,7 +396,7 @@ p {
     background-color: $MainTitleColor;
     &-copyrights {
         color: #fff;
-        @include cssLock(13, 16, 300, 1200);
+        @include cssLock(13, 15, 300, 1200);
         font-weight: 400;
     }
 }

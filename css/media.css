@@ -87,11 +87,15 @@
     grid-template-columns: 1fr 3fr; }
     .contact .map {
       height: auto; }
+    .contact .icons .facebook-icon,
+    .contact .icons .instagram-icon {
+      width: 24px;
+      height: 24px; }
   .contact-page-content {
     width: 80%;
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr  1fr;
+    grid-template-columns: 1fr 1fr;
     grid-column-gap: 50px;
     margin: 0 auto; }
     .contact-page-content .details {

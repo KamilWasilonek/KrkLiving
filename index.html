@@ -3,10 +3,19 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>KrakowLiving</title>
+
+
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css">
     <link rel="stylesheet" href="css/main.css">
+
+    <!-- <script type="text/javascript" charset="utf-8">
+        $(window).load(function () {
+            $('.flexslider').flexslider();
+        });
+    </script> -->
 </head>
 
 <body>
@@ -18,7 +27,7 @@
         <div class="header-menu">
             <div class="menu-bar" id="menu-bar">
                 <div class="logo" id='logo'>
-                    <img src="images/Logo.jpg" alt="Company logo">
+                    <img src="images/Logo-t.png" alt="Company logo">
                 </div>
                 <div class="contact-text" id='contact-text'>
                     <p>+48 788 492 658 </p>
@@ -71,9 +80,26 @@
         </div>
     </section>
 
-    <section class="slider">
-        <img src="images/services-slide-3.jpg" alt="Service 3">
-    </section>
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="images/services-slide-1.jpg" />
+                <p class="flex-caption"> <span>Wycieczki</span>  <br>
+                    Chętnie zorganizujemy dla Ciebie wycieczkę.</p>
+            </li>
+            <li>
+                <img src="images/services-slide-3.jpg" />
+                <p class="flex-caption"> <span>Rowery</span>  <br>
+                    Nasze miejskie rowery są dostępne do wypożyczenia.</p>
+            </li>
+            <li>
+                <img src="images/services-slide-4.jpg" />
+                <p class="flex-caption"> <span>Transfery</span> <br>
+                    Nasi kierowcy zawiozą Cię bezpiecznie i wygodnie.</p>
+            </li>
+        </ul>
+    </div>
+
 
     <section class='apartments'>
         <div class="apartments-left">
@@ -133,6 +159,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
+    <script src="js/jquery.flexslider.js"></script>
 </body>
 
 </html>

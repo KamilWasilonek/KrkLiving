@@ -7,11 +7,23 @@ $(document).ready(function () {
             $('#logo').css("opacity", "0");
             $('#contact-text').css("opacity", "1");
 
+            if (window.innerWidth < 992) {
+                $('#menu-nav').css("background", "rgb(255,255,255,0.7)");
+            } else {
+                $('#menu-nav').css("background", "rgb(255,255,255,0)");
+            }
+
         } else {
 
             $('#menu-bar').css("background", "rgb(255,255,255,1)");
             $('#logo').css("opacity", "1");
             $('#contact-text').css("opacity", "0");
+
+            if (window.innerWidth < 992) {
+                $('#menu-nav').css("background", "rgb(255,255,255,1)");
+            } else {
+                $('#menu-nav').css("background", "rgb(255,255,255,0)");
+            }
 
         }
     })

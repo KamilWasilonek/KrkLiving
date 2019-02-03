@@ -36,6 +36,7 @@
         margin-bottom: 10px; }
       .services .service .text .price-table {
         font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1200 - 300)));
+        font-family: "Lato";
         margin-top: 10px;
         border: solid 1px #DDEEEE;
         border-collapse: collapse;
