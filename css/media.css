@@ -122,4 +122,6 @@
     .apartments-right {
       display: block; }
   .opinion {
-    height: 50vh; } }
+    height: 50vh; }
+  .contact-page-content .map-link {
+    height: 300px; } }

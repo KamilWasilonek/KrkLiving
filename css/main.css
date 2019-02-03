@@ -56,11 +56,11 @@ p {
     top: 5px;
     left: 40px;
     font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1200 - 300)));
-    color: #fff;
+    color: #000;
     text-align: center; }
   .header-menu .menu-bar {
     transition: background 0.5s ease-in-out;
-    background: #000;
+    background: #fff;
     position: fixed;
     top: 0;
     left: 0;
@@ -76,7 +76,7 @@ p {
       .header-menu .menu-bar .menu-btn .btn-line {
         height: 3px;
         width: 28px;
-        background: #fff;
+        background: #000;
         margin-bottom: 6px;
         border-radius: 60px; }
       .header-menu .menu-bar .menu-btn.close .btn-line:nth-child(1) {
@@ -89,8 +89,9 @@ p {
     font-family: "Lato";
     font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
     font-weight: 400;
+    background: rgba(0, 0, 0, 0);
     transition: background 0.5s ease-in-out;
-    display: none;
+    visibility: hidden;
     transform: translate3d(100%, 0, 0);
     background: #000;
     margin-top: 50px;
@@ -103,11 +104,12 @@ p {
         padding: 10px 0; }
         .header-menu .menu-nav ul li a {
           text-decoration: none;
-          color: #fff; }
+          color: #000; }
         .header-menu .menu-nav ul li:hover {
-          background-color: #992727; }
+          background-color: #992727;
+          color: #fff; }
     .header-menu .menu-nav.show {
-      display: block;
+      visibility: visible;
       transform: translate3d(0, 0, 0); }
 
 .header-description {
@@ -284,7 +286,7 @@ p {
     font-family: "Lato";
     font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
     font-weight: 400;
-    font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1200 - 300))); }
+    font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300))); }
   .contact-info .address {
     margin: 20px 0; }
   .contact-info .icons {
@@ -329,8 +331,7 @@ p {
     min-height: 100vh; }
   .header-menu .logo img {
     left: 40px;
-    top: 0;
-    height: 70px; }
+    top: 0; }
   .header-menu .contact-text {
     left: 100px; }
   .opinion-slider .content {
@@ -437,4 +438,6 @@ p {
     .apartments-right {
       display: block; }
   .opinion {
-    height: 50vh; } }
+    height: 50vh; }
+  .contact-page-content .map-link {
+    height: 300px; } }

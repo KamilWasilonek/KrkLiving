@@ -1,6 +1,6 @@
 @import 'config';
 .contact-page {
-    background-image: url("../images/contact.jpg") ;
+    background-image: url("../images/pexels-photo.jpg") ;
     background-size: 100% 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -18,7 +18,7 @@
         font-family: 'Playfair Display';
         font-weight: 400;
         text-align: center;
-        color: #fff;
+        color: black;
         @include cssLock(40,
         45);
         padding-top: 100px;
@@ -63,7 +63,7 @@
             }
             .info-label {
                 @include cssLock(13,15);
-                color: #fff;
+                color: #000;
             }
             .loading-icon {
                 display: none;

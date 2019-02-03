@@ -74,12 +74,12 @@ p {
             16,
             300,
             1200);
-            color: #fff;
+            color: #000;
             text-align: center;
         }
         .menu-bar {
             transition: background 0.5s ease-in-out;
-            background: #000;
+            background: #fff;
             position: fixed;
             top: 0;
             left: 0;
@@ -95,7 +95,7 @@ p {
                 .btn-line {
                     height: 3px;
                     width: 28px;
-                    background: #fff;
+                    background: #000;
                     margin-bottom: 6px;
                     border-radius: 60px;
                 }
@@ -116,9 +116,10 @@ p {
         }
         .menu-nav {
             @include descriptionStyle;
+            background: rgba(0,0,0,0);
             transition: background 0.5s ease-in-out;
-            display: none;
-            // visibility: hidden;
+            // display: none;
+            visibility: hidden;
             transform: translate3d(100%, 0, 0);
             background: #000;
             margin-top: 50px;
@@ -131,16 +132,17 @@ p {
                     padding: 10px 0;
                     a {
                         text-decoration: none;
-                        color: #fff;
+                        color: #000;
                     }
                     &:hover {
                         background-color: $MainTitleColor;
+                        color: #fff;
                     }
                 }
             }
             &.show {
-                display: block;
-                // visibility: visible;
+                // display: block;
+                visibility: visible;
                 transform: translate3d(0, 0, 0);
             }
         }
@@ -338,7 +340,7 @@ p {
         }
         .details {
             @include descriptionStyle;
-            @include cssLock(13,
+            @include cssLock(12,
             15,
             300,
             1200);

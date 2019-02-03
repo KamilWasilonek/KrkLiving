@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
 .contact-page {
-  background-image: url("../images/contact.jpg");
+  background-image: url("../images/pexels-photo.jpg");
   background-size: 100% 100vh;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -18,7 +18,7 @@
     font-family: 'Playfair Display';
     font-weight: 400;
     text-align: center;
-    color: #fff;
+    color: black;
     font-size: calc(40px + (45 - 40) * ((100vw - 300px) / (1200 - 300)));
     padding-top: 100px; }
   .contact-page-content {
@@ -61,7 +61,7 @@
         background-color: #000; }
       .contact-page-content .message .info-label {
         font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1200 - 300)));
-        color: #fff; }
+        color: #000; }
       .contact-page-content .message .loading-icon {
         display: none;
         width: 60px; }
@@ -226,4 +226,6 @@
     .apartments-right {
       display: block; }
   .opinion {
-    height: 50vh; } }
+    height: 50vh; }
+  .contact-page-content .map-link {
+    height: 300px; } }

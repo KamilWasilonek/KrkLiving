@@ -42,7 +42,6 @@
                 img {
                     left: 40px;
                     top: 0;
-                    height: 70px;
                 }
             }
             .contact-text {
@@ -220,5 +219,12 @@
     }
     .opinion {
         height: 50vh;
+    }
+    .contact-page{
+        &-content{
+            .map-link{
+                height: 300px;
+            }
+        }
     }
 }
