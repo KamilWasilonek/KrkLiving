@@ -97,7 +97,7 @@
 
 .travel .details {
   width: 100%;
-  margin: 0; }
+  margin-bottom: 0 0 0 30px; }
   .travel .details .sub-title {
     width: 80%;
     margin: 0 auto;
@@ -114,8 +114,7 @@
     font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1200 - 300)));
     width: 80%;
     margin: 10px auto;
-    line-height: 1.4;
-    margin-bottom: 30px; }
+    line-height: 1.4; }
     .travel .details ul li {
       list-style: none;
       margin-bottom: 10px; }

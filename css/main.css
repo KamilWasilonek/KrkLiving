@@ -42,7 +42,7 @@ p {
   .header-menu .logo {
     transition: opacity 0.5s ease; }
     .header-menu .logo img {
-      padding: 3px 0;
+      padding: 3px 0 3px 5px;
       position: fixed;
       left: 0;
       top: 0;
