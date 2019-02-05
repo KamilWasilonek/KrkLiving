@@ -376,30 +376,64 @@ p {
     width: 80%; }
   .opinion-slider .content {
     width: 50%; }
-  .services {
-    padding-top: 80px;
-    min-height: calc(100vh - 100px); }
-    .services .service {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-auto-rows: 50vh; }
-      .services .service img {
-        width: 50%;
-        height: 100%; }
-    .services .service-1 img,
-    .services .service-2 img,
-    .services .service-3 img {
-      grid-area: img; }
+  .services .service-1,
+  .services .service-2,
+  .services .service-3 {
+    display: flex;
+    height: 350px; }
+    .services .service-1 .service-img,
+    .services .service-2 .service-img,
+    .services .service-3 .service-img {
+      width: 50%; }
     .services .service-1 .text,
     .services .service-2 .text,
     .services .service-3 .text {
-      grid-area: text1; }
-    .services .service-1 {
-      grid-template-areas: 'img text1'; }
-    .services .service-2 {
-      grid-template-areas: 'text1 img'; }
-    .services .service-3 {
-      grid-template-areas: 'img text1'; }
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .services .service-1 .text .description,
+      .services .service-2 .text .description,
+      .services .service-3 .text .description {
+        width: 80%;
+        margin: 0 auto; }
+  .services .service-2 {
+    flex-direction: row-reverse; }
+  .travel .flexContainer {
+    width: 100%;
+    display: flex; }
+    .travel .flexContainer .travel-1,
+    .travel .flexContainer .travel-2 {
+      width: 44%;
+      padding: 0 3%; }
+  .travel .details {
+    width: 100%; }
+    .travel .details .sub-title {
+      font-family: "Playfair Display";
+      font-weight: 400;
+      color: #992727;
+      font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300)));
+      font-size: calc(18px + (30 - 18) * ((100vw - 300px) / (1200 - 300)));
+      text-align: center;
+      margin-bottom: 10px; }
+    .travel .details ul {
+      font-family: "Lato";
+      font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
+      font-weight: 400;
+      font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1200 - 300)));
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      line-height: 1.4;
+      margin-bottom: 30px; }
+      .travel .details ul li {
+        list-style: none;
+        margin-bottom: 10px; }
+        .travel .details ul li img {
+          padding-right: 10px; }
   .contact-page-content {
     width: 80%;
     margin: 0;
@@ -490,7 +524,12 @@ p {
 @media (min-width: 1600px) {
   .flexslider {
     width: 75%;
-    height: 650px; } }
+    height: 650px; }
+  .services .service-1,
+  .services .service-2,
+  .services .service-3 {
+    display: flex;
+    height: 450px; } }
 
 @media (max-width: 767px) and (orientation: landscape) {
   .aparthotel {

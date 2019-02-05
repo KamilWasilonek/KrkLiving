@@ -2,23 +2,20 @@
 .services {
     padding-top: 50px;
     min-height: calc(100vh - 70px);
-    @include centerText();
-    flex-direction: column;
+    width: 100%;
     .service {
         width: 100%;
-        img {
+        .service-img {
             width: 100%;
         }
         .text {
             padding: 20px 0 30px 0;
-            @include centerText;
-            flex-direction: column;
+            text-align: center;
             width: 80%;
             margin: 0 auto;
             .title {
                 @include titleStyle;
                 padding-bottom: 10px;
-                @include cssLock(30, 40, 300, 1200);
             }
             .description {
                 @include descriptionStyle;
@@ -30,7 +27,7 @@
             .price-table {
                 @include cssLock(13, 16, 300, 1200);
                 font-family: $LatoFont;
-                margin-top: 10px;
+                margin-top: 20px;
                 border: solid 1px #DDEEEE;
                 border-collapse: collapse;
                 border-spacing: 0;
@@ -52,6 +49,67 @@
                         padding: 10px;
                         text-shadow: 1px 1px 1px #fff;
                     }
+                }
+            }
+        }
+    }
+}
+
+.travel {
+    .flexContainer {
+        .travel-1,
+        .travel-2 {
+            width: 100%;
+            margin: 40px 0 40px 0;
+        }
+        .title {
+            @include titleStyle;
+            @include cssLock(30, 40);
+            @include centerText;
+            margin-bottom: 5px;
+        }
+        img {
+            width: 100%;
+        }
+        .text {
+            width: 80%;
+            margin: 0 auto;
+            .sub-title {
+                @include titleStyle;
+                @include cssLock(15, 25);
+                text-align: center;
+                margin: 10px;
+            }
+            .description {
+                @include descriptionStyle;
+                @include cssLock(13, 16);
+                text-align: center;
+                line-height: 1.5;
+            }
+        }
+    }
+    .details {
+        width: 100%;
+        margin: 0;
+        .sub-title {
+            width: 80%;
+            margin: 0 auto;
+            @include titleStyle;
+            @include cssLock(18, 30);
+            margin-bottom: 10px;
+        }
+        ul {
+            @include descriptionStyle;
+            @include cssLock(13, 16);
+            width: 80%;
+            margin: 10px auto;
+            line-height: 1.4;
+            margin-bottom: 30px;
+            li {
+                list-style: none;
+                margin-bottom: 10px;
+                img {
+                    padding-right: 10px;
                 }
             }
         }
