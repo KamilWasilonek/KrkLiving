@@ -159,7 +159,16 @@ p {
     .aparthotel-right .title,
     .aparthotel-right .description {
       text-align: center;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
       display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
       justify-content: center;
       align-items: center; }
     .aparthotel-right .description {
@@ -240,7 +249,16 @@ p {
     .apartments-left .description-1,
     .apartments-left .title {
       text-align: center;
+      display: -webkit-box;
+      /* OLD - iOS 6-, Safari 3.1-6 */
+      display: -moz-box;
+      /* OLD - Firefox 19- (buggy but mostly works) */
+      display: -ms-flexbox;
+      /* TWEENER - IE 10 */
+      display: -webkit-flex;
+      /* NEW - Chrome */
       display: flex;
+      /* NEW, Spec - Opera 12.1, Firefox 20+ */
       justify-content: center;
       align-items: center; }
     .apartments-left .title {
@@ -292,7 +310,16 @@ p {
     height: 100%;
     margin: 0 40px;
     text-align: center;
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
     display: flex;
+    /* NEW, Spec - Opera 12.1, Firefox 20+ */
     justify-content: center;
     align-items: center;
     flex-direction: column; }
@@ -304,7 +331,16 @@ p {
   padding: 50px 0;
   color: #fff;
   text-align: center;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
   display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
   justify-content: center;
   align-items: center;
   flex-direction: column; }
@@ -343,7 +379,16 @@ p {
   width: 100%;
   min-height: 20px;
   text-align: center;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -moz-box;
+  /* OLD - Firefox 19- (buggy but mostly works) */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: -webkit-flex;
+  /* NEW - Chrome */
   display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
   justify-content: center;
   align-items: center;
   background-color: #992727; }
@@ -435,13 +480,14 @@ p {
         .travel .details ul li img {
           padding-right: 10px; }
   .contact-page-content {
-    width: 80%;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 50px;
-    margin: 0 auto; }
+    width: 100%;
+    display: flex; }
+    .contact-page-content .message {
+      flex: 1;
+      margin: 0 3%; }
     .contact-page-content .details {
+      flex: 1;
+      margin: 0 3%;
       text-align: left;
       align-self: flex-start; }
     .contact-page-content .map-link {
@@ -483,18 +529,10 @@ p {
     .contact .icons .instagram-icon {
       width: 24px;
       height: 24px; }
-  .contact-page-content {
-    width: 80%;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 50px;
-    margin: 0 auto; }
-    .contact-page-content .details {
-      text-align: left;
-      align-self: flex-start; }
-    .contact-page-content .map-link {
-      height: 200px; } }
+  .contact-page-content .message {
+    flex: 2; }
+  .contact-page-content .details {
+    flex: 1; } }
 
 @media (min-width: 1200px) {
   .header-menu .menu-nav {
@@ -529,7 +567,7 @@ p {
   .services .service-2,
   .services .service-3 {
     display: flex;
-    height: 450px; } }
+    height: 500px; } }
 
 @media (max-width: 767px) and (orientation: landscape) {
   .aparthotel {

@@ -60,30 +60,28 @@
             }
         }
     } // SERVICES
-
-
     .services {
         .service-1,
         .service-2,
-        .service-3{
+        .service-3 {
             display: flex;
             height: 350px;
-            .service-img{
+            .service-img {
                 width: 50%;
             }
-            .text{
+            .text {
                 width: 50%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                .description{
+                .description {
                     width: 80%;
                     margin: 0 auto;
                 }
             }
         }
-        .service-2{
+        .service-2 {
             flex-direction: row-reverse;
         }
     }
@@ -127,16 +125,16 @@
     } // CONTACT PAGE
     .contact-page {
         &-content {
-            width: 80%;
-            margin: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 50px;
-            margin: 0 auto; // display: flex;
-            // justify-content: center;
-            .message {}
+            width: 100%;
+            display: flex;
+            .message {
+                flex: 1;
+                margin: 0 3%;
+            }
             .details {
-                text-align: left; // align-self: auto;
+                flex: 1;
+                margin: 0 3%;
+                text-align: left;
                 align-self: flex-start;
             }
             .map-link {
@@ -202,18 +200,11 @@
     }
     .contact-page {
         &-content {
-            width: 80%;
-            margin: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-column-gap: 50px;
-            margin: 0 auto;
-            .details {
-                text-align: left; // align-self: auto;
-                align-self: flex-start;
+            .message {
+                flex: 2;
             }
-            .map-link {
-                height: 200px;
+            .details {
+                flex: 1;
             }
         }
     }
@@ -270,9 +261,9 @@
     .services {
         .service-1,
         .service-2,
-        .service-3{
+        .service-3 {
             display: flex;
-            height: 450px;
+            height: 500px;
         }
     }
 }

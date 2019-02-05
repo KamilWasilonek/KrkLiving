@@ -1,15 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
 .contact-page {
+  background-image: url("../images/pexels-photo.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   padding-bottom: 20px;
-  min-height: calc(100vh - 20px); }
-  .contact-page-bg {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; }
+  min-height: calc(100vh - 40px); }
   .contact-page-title {
     font-family: 'Playfair Display';
     font-weight: 400;
@@ -187,13 +184,14 @@
         .travel .details ul li img {
           padding-right: 10px; }
   .contact-page-content {
-    width: 80%;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 50px;
-    margin: 0 auto; }
+    width: 100%;
+    display: flex; }
+    .contact-page-content .message {
+      flex: 1;
+      margin: 0 3%; }
     .contact-page-content .details {
+      flex: 1;
+      margin: 0 3%;
       text-align: left;
       align-self: flex-start; }
     .contact-page-content .map-link {
@@ -235,18 +233,10 @@
     .contact .icons .instagram-icon {
       width: 24px;
       height: 24px; }
-  .contact-page-content {
-    width: 80%;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 50px;
-    margin: 0 auto; }
-    .contact-page-content .details {
-      text-align: left;
-      align-self: flex-start; }
-    .contact-page-content .map-link {
-      height: 200px; } }
+  .contact-page-content .message {
+    flex: 2; }
+  .contact-page-content .details {
+    flex: 1; } }
 
 @media (min-width: 1200px) {
   .header-menu .menu-nav {
@@ -281,7 +271,7 @@
   .services .service-2,
   .services .service-3 {
     display: flex;
-    height: 450px; } }
+    height: 500px; } }
 
 @media (max-width: 767px) and (orientation: landscape) {
   .aparthotel {

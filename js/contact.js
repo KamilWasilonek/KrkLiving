@@ -1,15 +1,6 @@
 $(document).ready(function () {
 
-
-    if($.browser.webkit){
-        $("#contact-page").css('background-attachment', 'scroll');
-    }
-  
-
-
-
-
-    // $('#loading-icon').hide();
+    $('#loading-icon').hide();
 
     $('#name').focusout(function () {
         checkName();
