@@ -1,11 +1,6 @@
 @import 'config';
 // min-width: 480px
 @include respond-to(mediaSm) {
-    .apartments {
-        &-left {
-            min-height: 70vh;
-        }
-    }
     .header {
         &-menu {
             .logo {
@@ -21,6 +16,9 @@
     .slider {
         height: 70vh;
     }
+    .apartments {
+        height: 75vh;
+    }
     .contact-page {
         &-content {
             .map-link {
@@ -33,7 +31,7 @@
 // min-width: 768px
 @include respond-to(mediaMd) {
     .aparthotel {
-        height: 150vh;
+        height: 120vh;
     }
     .header {
         &-menu {
@@ -50,6 +48,9 @@
     }
     .flexslider {
         width: 80%;
+    }
+    .apartments {
+        height: 90vh;
     }
     .services {
         .service-1,
@@ -176,9 +177,14 @@
         height: 90vh;
     }
     .contact {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
+        @include flexbox;
+        &-info {
+            @include flex-basis(25%);
+            max-width: 25%;
+        }
         .map {
+            @include flex-basis(75%);
+            max-width: 75%;
             height: auto;
         }
         .icons {
@@ -231,12 +237,12 @@
     .apartments {
         height: 80vh;
         @include flexbox;
-        &-left{
+        &-left {
             @include flex-basis(57%);
             max-width: 57%;
             padding-right: 3%;
         }
-        &-right{
+        &-right {
             display: block;
             @include flex-basis(40%);
             max-width: 40%;
@@ -270,5 +276,18 @@
 }
 
 @media(max-width: 992px) and (orientation: landscape) {
-   
+    .aparthotel{
+        height: 200vh;
+    }
+    .apartments{
+        height: 140vh;
+    }
+    .opinion{
+        height: 95vh;
+    }
+    .contact{
+        .map{
+            height: 70vh;
+        }
+    }
 }

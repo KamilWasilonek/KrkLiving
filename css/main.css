@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; }
+
 html,
 body {
   width: 100%;
@@ -39,15 +42,14 @@ p {
   left: 0;
   width: 100%;
   z-index: 3; }
-  .header-menu .logo {
-    transition: opacity 0.5s ease; }
-    .header-menu .logo img {
-      padding: 3px 0 3px 5px;
-      position: fixed;
-      left: 0;
-      top: 0;
-      width: auto;
-      height: 44px; }
+  .header-menu .logo img {
+    transition: opacity 0.5s ease;
+    padding: 3px 0 3px 5px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: 44px; }
   .header-menu .contact-text {
     font-family: "Lato";
     font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
@@ -258,7 +260,7 @@ p {
     z-index: 2; }
 
 .apartments {
-  height: 50vh;
+  height: 65vh;
   width: 100%;
   max-width: 100%;
   margin-bottom: 30px; }
@@ -458,21 +460,24 @@ p {
     font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1200 - 300)));
     font-weight: 400; }
 
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; }
+
 @media (min-width: 480px) {
-  .apartments-left {
-    min-height: 70vh; }
   .header-menu .logo img {
     left: 20px; }
   .header-menu .contact-text {
     left: 40px; }
   .slider {
     height: 70vh; }
+  .apartments {
+    height: 75vh; }
   .contact-page-content .map-link {
     height: 250px; } }
 
 @media (min-width: 768px) {
   .aparthotel {
-    height: 150vh; }
+    height: 120vh; }
   .header-menu .logo img {
     left: 40px;
     top: 0; }
@@ -480,6 +485,8 @@ p {
     left: 70px; }
   .flexslider {
     width: 80%; }
+  .apartments {
+    height: 90vh; }
   .services .service-1,
   .services .service-2,
   .services .service-3 {
@@ -580,9 +587,19 @@ p {
   .slider {
     height: 90vh; }
   .contact {
-    display: grid;
-    grid-template-columns: 1fr 3fr; }
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .contact-info {
+      -webkit-flex-basis: 25%;
+      flex-basis: 25%;
+      max-width: 25%; }
     .contact .map {
+      -webkit-flex-basis: 75%;
+      flex-basis: 75%;
+      max-width: 75%;
       height: auto; }
     .contact .icons .facebook-icon,
     .contact .icons .instagram-icon {
@@ -641,3 +658,13 @@ p {
   .services .service-3 {
     display: flex;
     height: 500px; } }
+
+@media (max-width: 992px) and (orientation: landscape) {
+  .aparthotel {
+    height: 200vh; }
+  .apartments {
+    height: 140vh; }
+  .opinion {
+    height: 95vh; }
+  .contact .map {
+    height: 70vh; } }

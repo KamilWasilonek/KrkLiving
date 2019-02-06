@@ -4,6 +4,10 @@ $PlayfairDisplayFont: 'Playfair Display';
 $LatoFont: 'Lato';
 $MainTitleColor: #992727;
 
+*{
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+  }
+
 $breakpoints: ( 
     'mediaSm': ( min-width: 480px),
     'mediaMd': ( min-width: 768px),
