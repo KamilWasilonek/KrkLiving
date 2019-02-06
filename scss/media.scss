@@ -32,10 +32,8 @@
 
 // min-width: 768px
 @include respond-to(mediaMd) {
-    .apartments {
-        &-left {
-            min-height: 100vh;
-        }
+    .aparthotel {
+        height: 150vh;
     }
     .header {
         &-menu {
@@ -53,13 +51,6 @@
     .flexslider {
         width: 80%;
     }
-    .opinion {
-        &-slider {
-            .content {
-                width: 50%;
-            }
-        }
-    } // SERVICES
     .services {
         .service-1,
         .service-2,
@@ -220,25 +211,35 @@
         }
     }
     .aparthotel {
-        height: 100vh;
-        display: grid;
-        grid-template-areas: "left right";
-        grid-template-columns: 1.5fr 2.5fr;
-        grid-column-gap: 35px;
+        display: flex;
         &-left {
+            flex-basis: 40%;
+            max-width: 40%;
             display: block;
+            min-height: 100vh;
             .img-1 {
                 width: 100%;
                 height: 100%;
             }
         }
+        &-right {
+            flex-basis: 57%;
+            max-width: 57%;
+            padding-left: 3%;
+        }
     }
     .apartments {
-        display: grid;
-        grid-template-columns: 1.5fr 1fr;
-        grid-column-gap: 30px;
-        &-right {
+        height: 80vh;
+        @include flexbox;
+        &-left{
+            @include flex-basis(57%);
+            max-width: 57%;
+            padding-right: 3%;
+        }
+        &-right{
             display: block;
+            @include flex-basis(40%);
+            max-width: 40%;
         }
     }
     .opinion {
@@ -268,21 +269,6 @@
     }
 }
 
-@media(max-width: 767px) and (orientation: landscape) {
-    .aparthotel {
-        height: 200vh;
-    }
-    .apartments {
-        &-left {
-            height: 100vh;
-        }
-    }
-    .opinion {
-        height: 80vh;
-    }
-    .contact {
-        .map {
-            height: 80vh;
-        }
-    }
+@media(max-width: 992px) and (orientation: landscape) {
+   
 }

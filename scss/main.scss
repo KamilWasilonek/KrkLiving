@@ -121,6 +121,7 @@ p {
             font-size: 16px;
             ul {
                 list-style: none;
+                list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7);
                 li {
                     text-align: center;
                     padding: 10px 0;
@@ -143,11 +144,15 @@ p {
     }
     &-description {
         height: 100vh;
+        width: 100%;
         color: white;
         display: flex;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         text-align: center;
         .title,
         .content {
@@ -167,61 +172,59 @@ p {
 
 .aparthotel {
     width: 100%;
+    max-width: 100%;
     margin: 30px 0;
-    height: 90vh;
+    height: 100vh;
+    overflow: hidden;
     &-left {
-        grid-area: left;
         display: none;
     }
     &-right {
         height: 100%;
-        grid-area: right;
-        display: grid;
-        grid-template-areas: "title img2" "img3 desc1" "desc2 img4";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        .row-1,
+        .row-2,
+        .row-3 {
+            @include flexbox;
+            height: 33.33333333%;
+        }
+        .row-1 {
+            @include centerText;
+            .title {
+                width: 50%;
+            }
+            .img-2 {
+                width: 50%;
+            }
+        }
         .img-2,
         .img-3,
         .img-4 {
-            width: 100%;
+            @include flex-basis(50%);
             height: 100%;
-        }
-        .img-2 {
-            grid-area: img2;
-        }
-        .img-3 {
-            grid-area: img3;
-        }
-        .img-4 {
-            grid-area: img4;
+            max-width: 50%;
         }
         .title,
         .description {
-            @include centerText;
+            width: 80%;
         }
         .description {
-            grid-area: desc;
             @include descriptionStyle;
-            padding: 0 15px;
-        }
-        .description-1 {
-            grid-area: desc1;
-        }
-        .description-2 {
-            grid-area: desc2;
         }
         .title {
-            grid-area: title;
             @include titleStyle;
+        }
+        .flexContainer {
+            @include flex-basis(50%);
+            max-width: 50%;
+            @include centerText;
         }
     }
 }
 
-/////////////////////////////
 .flexslider {
     position: relative;
     width: 95%;
-    margin: 60px auto;
+    margin: 40px auto;
     .slides {
         height: 100%;
         width: 100%;
@@ -247,65 +250,59 @@ p {
         font-size: 14px;
         line-height: 25px;
         @include descriptionStyle;
-        span{
+        span {
             @include titleStyle;
             color: #fff;
             margin-bottom: 10px;
         }
     }
-    .flex-control-paging{
+    .flex-control-paging {
         display: none;
     }
-
     .flex-next,
-    .flex-prev{
+    .flex-prev {
         z-index: 2;
     }
 }
 
-//////////////////////
-// .slider {
-//     width: 100%;
-//     margin: 30px 0;
-//     height: 50vh;
-//     img {
-//         width: 100%;
-//         height: 100%;
-//     }
-// }
-
 .apartments {
+    height: 50vh;
     width: 100%;
-    margin: 30px 0;
+    max-width: 100%;
+    margin-bottom: 30px;
     &-left {
-        height: 50vh;
-        display: grid;
-        grid-template-areas: "title img1" "img2 desc1";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        height: 100%;
+        .row-1,
+        .row-2 {
+            @include flexbox;
+            height: 50%;
+        }
+        .title,
+        .img-1,
+        .img-2,
+        .flexContainer {
+            @include flex-basis(50%);
+            max-width: 50%;
+        }
+        .flexContainer{
+            @include flex-basis(50%);
+            max-width: 50%;
+            @include centerText;
+        }
+        .description-1{
+            width: 80%;
+        }
         .img-1,
         .img-2 {
             width: 100%;
             height: 100%;
         }
-        .img-1 {
-            grid-area: img1;
-        }
-        .img-2 {
-            grid-area: img2;
-        }
-        .description-1,
         .title {
+            @include titleStyle;
             @include centerText;
         }
-        .title {
-            grid-area: title;
-            @include titleStyle;
-        }
         .description-1 {
-            grid-area: desc1;
             @include descriptionStyle;
-            padding: 0 15px;
         }
     }
     &-right {
@@ -345,9 +342,11 @@ p {
     &-slider {
         @include cssLock(12, 18, 300, 1200);
         height: 100%;
-        margin: 0 40px;
-        @include centerText;
-        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+        @include flexbox;
+        @include align-items(center);
+        text-align: center;
         .content {
             color: #fff;
         }

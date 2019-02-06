@@ -98,7 +98,8 @@ p {
     width: 100%;
     font-size: 16px; }
     .header-menu .menu-nav ul {
-      list-style: none; }
+      list-style: none;
+      list-style-image: url(data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7); }
       .header-menu .menu-nav ul li {
         text-align: center;
         padding: 10px 0; }
@@ -114,11 +115,15 @@ p {
 
 .header-description {
   height: 100vh;
+  width: 100%;
   color: white;
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   text-align: center; }
   .header-description .title,
   .header-description .content {
@@ -133,65 +138,88 @@ p {
 
 .aparthotel {
   width: 100%;
+  max-width: 100%;
   margin: 30px 0;
-  height: 90vh; }
+  height: 100vh;
+  overflow: hidden; }
   .aparthotel-left {
-    grid-area: left;
     display: none; }
   .aparthotel-right {
-    height: 100%;
-    grid-area: right;
-    display: grid;
-    grid-template-areas: "title img2" "img3 desc1" "desc2 img4";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; }
+    height: 100%; }
+    .aparthotel-right .row-1,
+    .aparthotel-right .row-2,
+    .aparthotel-right .row-3 {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 33.33333333%; }
+    .aparthotel-right .row-1 {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      text-align: center; }
+      .aparthotel-right .row-1 .title {
+        width: 50%; }
+      .aparthotel-right .row-1 .img-2 {
+        width: 50%; }
     .aparthotel-right .img-2,
     .aparthotel-right .img-3,
     .aparthotel-right .img-4 {
-      width: 100%;
-      height: 100%; }
-    .aparthotel-right .img-2 {
-      grid-area: img2; }
-    .aparthotel-right .img-3 {
-      grid-area: img3; }
-    .aparthotel-right .img-4 {
-      grid-area: img4; }
+      -webkit-flex-basis: 50%;
+      flex-basis: 50%;
+      height: 100%;
+      max-width: 50%; }
     .aparthotel-right .title,
     .aparthotel-right .description {
-      text-align: center;
-      display: -webkit-box;
-      /* OLD - iOS 6-, Safari 3.1-6 */
-      display: -moz-box;
-      /* OLD - Firefox 19- (buggy but mostly works) */
-      display: -ms-flexbox;
-      /* TWEENER - IE 10 */
-      display: -webkit-flex;
-      /* NEW - Chrome */
-      display: flex;
-      /* NEW, Spec - Opera 12.1, Firefox 20+ */
-      justify-content: center;
-      align-items: center; }
+      width: 80%; }
     .aparthotel-right .description {
-      grid-area: desc;
       font-family: "Lato";
       font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
-      font-weight: 400;
-      padding: 0 15px; }
-    .aparthotel-right .description-1 {
-      grid-area: desc1; }
-    .aparthotel-right .description-2 {
-      grid-area: desc2; }
+      font-weight: 400; }
     .aparthotel-right .title {
-      grid-area: title;
       font-family: "Playfair Display";
       font-weight: 400;
       color: #992727;
       font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300))); }
+    .aparthotel-right .flexContainer {
+      -webkit-flex-basis: 50%;
+      flex-basis: 50%;
+      max-width: 50%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      text-align: center; }
 
 .flexslider {
   position: relative;
   width: 95%;
-  margin: 60px auto; }
+  margin: 40px auto; }
   .flexslider .slides {
     height: 100%;
     width: 100%;
@@ -230,49 +258,78 @@ p {
     z-index: 2; }
 
 .apartments {
+  height: 50vh;
   width: 100%;
-  margin: 30px 0; }
+  max-width: 100%;
+  margin-bottom: 30px; }
   .apartments-left {
-    height: 50vh;
-    display: grid;
-    grid-template-areas: "title img1" "img2 desc1";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr; }
+    height: 100%; }
+    .apartments-left .row-1,
+    .apartments-left .row-2 {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      height: 50%; }
+    .apartments-left .title,
+    .apartments-left .img-1,
+    .apartments-left .img-2,
+    .apartments-left .flexContainer {
+      -webkit-flex-basis: 50%;
+      flex-basis: 50%;
+      max-width: 50%; }
+    .apartments-left .flexContainer {
+      -webkit-flex-basis: 50%;
+      flex-basis: 50%;
+      max-width: 50%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      text-align: center; }
+    .apartments-left .description-1 {
+      width: 80%; }
     .apartments-left .img-1,
     .apartments-left .img-2 {
       width: 100%;
       height: 100%; }
-    .apartments-left .img-1 {
-      grid-area: img1; }
-    .apartments-left .img-2 {
-      grid-area: img2; }
-    .apartments-left .description-1,
     .apartments-left .title {
-      text-align: center;
-      display: -webkit-box;
-      /* OLD - iOS 6-, Safari 3.1-6 */
-      display: -moz-box;
-      /* OLD - Firefox 19- (buggy but mostly works) */
-      display: -ms-flexbox;
-      /* TWEENER - IE 10 */
-      display: -webkit-flex;
-      /* NEW - Chrome */
-      display: flex;
-      /* NEW, Spec - Opera 12.1, Firefox 20+ */
-      justify-content: center;
-      align-items: center; }
-    .apartments-left .title {
-      grid-area: title;
       font-family: "Playfair Display";
       font-weight: 400;
       color: #992727;
-      font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300))); }
+      font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300)));
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      text-align: center; }
     .apartments-left .description-1 {
-      grid-area: desc1;
       font-family: "Lato";
       font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
-      font-weight: 400;
-      padding: 0 15px; }
+      font-weight: 400; }
   .apartments-right {
     display: none; }
     .apartments-right .img-4 {
@@ -308,21 +365,19 @@ p {
   .opinion-slider {
     font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1200 - 300)));
     height: 100%;
-    margin: 0 40px;
-    text-align: center;
+    width: 80%;
+    margin: 0 auto;
     display: -webkit-box;
-    /* OLD - iOS 6-, Safari 3.1-6 */
     display: -moz-box;
-    /* OLD - Firefox 19- (buggy but mostly works) */
-    display: -ms-flexbox;
-    /* TWEENER - IE 10 */
     display: -webkit-flex;
-    /* NEW - Chrome */
+    display: -ms-flexbox;
     display: flex;
-    /* NEW, Spec - Opera 12.1, Firefox 20+ */
-    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
     align-items: center;
-    flex-direction: column; }
+    text-align: center; }
     .opinion-slider .content {
       color: #fff; }
 
@@ -330,19 +385,22 @@ p {
   background-color: #000;
   padding: 50px 0;
   color: #fff;
-  text-align: center;
   display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
-  /* NEW - Chrome */
+  display: -ms-flexbox;
   display: flex;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
+  text-align: center;
   flex-direction: column; }
   .contact-info .title {
     font-family: "Playfair Display";
@@ -378,19 +436,22 @@ p {
 .footer {
   width: 100%;
   min-height: 20px;
-  text-align: center;
   display: -webkit-box;
-  /* OLD - iOS 6-, Safari 3.1-6 */
   display: -moz-box;
-  /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox;
-  /* TWEENER - IE 10 */
   display: -webkit-flex;
-  /* NEW - Chrome */
+  display: -ms-flexbox;
   display: flex;
-  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
   align-items: center;
+  text-align: center;
   background-color: #992727; }
   .footer-copyrights {
     color: #fff;
@@ -410,8 +471,8 @@ p {
     height: 250px; } }
 
 @media (min-width: 768px) {
-  .apartments-left {
-    min-height: 100vh; }
+  .aparthotel {
+    height: 150vh; }
   .header-menu .logo img {
     left: 40px;
     top: 0; }
@@ -419,8 +480,6 @@ p {
     left: 70px; }
   .flexslider {
     width: 80%; }
-  .opinion-slider .content {
-    width: 50%; }
   .services .service-1,
   .services .service-2,
   .services .service-3 {
@@ -538,22 +597,36 @@ p {
   .header-menu .menu-nav {
     right: 50px; }
   .aparthotel {
-    height: 100vh;
-    display: grid;
-    grid-template-areas: "left right";
-    grid-template-columns: 1.5fr 2.5fr;
-    grid-column-gap: 35px; }
+    display: flex; }
     .aparthotel-left {
-      display: block; }
+      flex-basis: 40%;
+      max-width: 40%;
+      display: block;
+      min-height: 100vh; }
       .aparthotel-left .img-1 {
         width: 100%;
         height: 100%; }
+    .aparthotel-right {
+      flex-basis: 57%;
+      max-width: 57%;
+      padding-left: 3%; }
   .apartments {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    grid-column-gap: 30px; }
+    height: 80vh;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+    .apartments-left {
+      -webkit-flex-basis: 57%;
+      flex-basis: 57%;
+      max-width: 57%;
+      padding-right: 3%; }
     .apartments-right {
-      display: block; }
+      display: block;
+      -webkit-flex-basis: 40%;
+      flex-basis: 40%;
+      max-width: 40%; }
   .opinion {
     height: 65vh; }
   .contact-page-content .map-link {
@@ -568,13 +641,3 @@ p {
   .services .service-3 {
     display: flex;
     height: 500px; } }
-
-@media (max-width: 767px) and (orientation: landscape) {
-  .aparthotel {
-    height: 200vh; }
-  .apartments-left {
-    height: 100vh; }
-  .opinion {
-    height: 80vh; }
-  .contact .map {
-    height: 80vh; } }
