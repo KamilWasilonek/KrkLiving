@@ -7,23 +7,24 @@
     left: 20px; }
   .header-menu .contact-text {
     left: 40px; }
-  .slider {
-    height: 70vh; }
+  .flexslider {
+    height: 60%; }
+  .aparthotel {
+    width: 90%;
+    margin: 30px auto 0 auto; }
   .apartments {
     height: 75vh; }
   .contact-page-content .map-link {
     height: 250px; } }
 
 @media (min-width: 768px) {
-  .aparthotel {
-    height: 120vh; }
   .header-menu .logo img {
     left: 40px;
     top: 0; }
   .header-menu .contact-text {
     left: 70px; }
   .flexslider {
-    width: 80%; }
+    height: 75%; }
   .apartments {
     height: 90vh; }
   .services .service-1,
@@ -120,9 +121,6 @@
         justify-content: center;
         align-items: center;
         padding: 10px; }
-  .flexslider {
-    width: 75%;
-    height: 550px; }
   .slider {
     height: 90vh; }
   .contact {
@@ -157,17 +155,50 @@
     .aparthotel-left {
       flex-basis: 40%;
       max-width: 40%;
-      display: block;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
       min-height: 100vh; }
       .aparthotel-left .img-1 {
         width: 100%;
-        height: 100%; }
+        height: 80%; }
     .aparthotel-right {
       flex-basis: 57%;
       max-width: 57%;
-      padding-left: 3%; }
+      padding-left: 2%; }
+      .aparthotel-right .row-1 .border-container .title {
+        padding: 30px 0px;
+        border: 2px #992727 solid;
+        width: 90%; }
+      .aparthotel-right .row-2 .description,
+      .aparthotel-right .row-3 .description {
+        width: 85%;
+        padding: 30px 10px; }
+      .aparthotel-right .row-2 .border-container .description-1 {
+        border-top: 2px solid #992727;
+        border-right: 2px solid #992727;
+        background: linear-gradient(#992727, #992727) right bottom no-repeat;
+        background-size: 20% 2px; }
+      .aparthotel-right .row-3 .border-container .description-2 {
+        border-top: 2px solid #992727;
+        border-left: 2px solid #992727;
+        background: linear-gradient(#992727, #992727) left bottom no-repeat;
+        background-size: 20% 2px; }
+  .flexslider {
+    height: 85%; }
   .apartments {
-    height: 80vh;
     display: -webkit-box;
     display: -moz-box;
     display: -webkit-flex;
@@ -190,8 +221,7 @@
 
 @media (min-width: 1600px) {
   .flexslider {
-    width: 75%;
-    height: 650px; }
+    height: 85%; }
   .services .service-1,
   .services .service-2,
   .services .service-3 {
@@ -201,8 +231,16 @@
 @media (max-width: 992px) and (orientation: landscape) {
   .aparthotel {
     height: 200vh; }
+  .flexslider {
+    height: 100vh; }
   .apartments {
-    height: 140vh; }
+    height: 200vh; }
+  .opinion {
+    height: 95vh; }
+  .contact .map {
+    height: 70vh; } }
+
+@media (max-width: 992px) and (orientation: landscape) {
   .opinion {
     height: 95vh; }
   .contact .map {

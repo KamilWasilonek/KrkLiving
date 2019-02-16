@@ -54,6 +54,9 @@
 .travel .flexContainer .travel-2 {
   width: 100%;
   margin: 40px 0 40px 0; }
+  .travel .flexContainer .travel-1 img,
+  .travel .flexContainer .travel-2 img {
+    height: 400px; }
 
 .travel .flexContainer .title {
   font-family: "Playfair Display";

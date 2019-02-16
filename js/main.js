@@ -1,12 +1,12 @@
 $(document).ready(function () {
 
-    $(window).resize(function () {
-        if (window.innerWidth > 768) {
-            $(".apartments #description-1").html("KrakowLiving dysponuje ponadto 9 wysokiej klasy apartamentami zlokalizowanych w Starym Mieście i na Kazimierzu.<br> Apartamenty w naszej ofercie są odpowiednie zarówno dla osób podróżujących służbowo jak i dla rodzin spędzających wakacje. Wszystkie posiadają dostęp do prywatnej łazienki, kuchni i sprzętu RTV.");
-        } else {
-            $(".apartments #description-1").html("KrakowLiving dysponuje ponadto 9 wysokiej klasy apartamentami zlokalizowanych w Starym Mieście i na Kazimierzu.");
-        }
-    })
+    // $(window).resize(function () {
+    //     if (window.innerWidth > 768) {
+    //         $(".apartments #description-1").html("KrakowLiving dysponuje ponadto 9 wysokiej klasy apartamentami zlokalizowanych w Starym Mieście i na Kazimierzu.<br> Apartamenty w naszej ofercie są odpowiednie zarówno dla osób podróżujących służbowo jak i dla rodzin spędzających wakacje. Wszystkie posiadają dostęp do prywatnej łazienki, kuchni i sprzętu RTV.");
+    //     } else {
+    //         $(".apartments #description-1").html("KrakowLiving dysponuje ponadto 9 wysokiej klasy apartamentami zlokalizowanych w Starym Mieście i na Kazimierzu.");
+    //     }
+    // })
 
 
     var i = 1;

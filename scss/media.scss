@@ -13,9 +13,15 @@
             }
         }
     }
-    .slider {
-        height: 70vh;
+    .flexslider {
+        height: 60%;
     }
+    .aparthotel {
+        width: 90%;
+        margin: 30px auto 0 auto;
+    } // .slider {
+    //     height: 70vh;
+    // }
     .apartments {
         height: 75vh;
     }
@@ -30,9 +36,7 @@
 
 // min-width: 768px
 @include respond-to(mediaMd) {
-    .aparthotel {
-        height: 120vh;
-    }
+    .aparthotel {}
     .header {
         &-menu {
             .logo {
@@ -47,7 +51,7 @@
         }
     }
     .flexslider {
-        width: 80%;
+        height: 75%;
     }
     .apartments {
         height: 90vh;
@@ -169,10 +173,6 @@
             }
         }
     }
-    .flexslider {
-        width: 75%;
-        height: 550px;
-    }
     .slider {
         height: 90vh;
     }
@@ -221,21 +221,61 @@
         &-left {
             flex-basis: 40%;
             max-width: 40%;
-            display: block;
+            @include flexbox;
+            @include align-items(center);
+            @include justify-content(center);
             min-height: 100vh;
             .img-1 {
                 width: 100%;
-                height: 100%;
+                height: 80%;
             }
         }
         &-right {
             flex-basis: 57%;
             max-width: 57%;
-            padding-left: 3%;
+            padding-left: 2%;
+            .row-1 {
+                .border-container {
+                    .title {
+                        padding: 30px 0px;
+                        border: 2px $MainTitleColor solid;
+                        width: 90%;
+                    }
+                }
+            }
+            .row-2,
+            .row-3 {
+                .description {
+                    width: 85%;
+                    padding: 30px 10px;
+                }
+            }
+            .row-2 {
+                .border-container {
+                    .description-1 {
+                        border-top: 2px solid $MainTitleColor;
+                        border-right: 2px solid $MainTitleColor;
+                        background: linear-gradient($MainTitleColor, $MainTitleColor) right bottom no-repeat;
+                        background-size: 20% 2px;
+                    }
+                }
+            }
+            .row-3 {
+                .border-container {
+                    .description-2 {
+                        border-top: 2px solid $MainTitleColor;
+                        border-left: 2px solid $MainTitleColor;
+                        background: linear-gradient($MainTitleColor, $MainTitleColor) left bottom no-repeat;
+                        background-size: 20% 2px;
+                    }
+                }
+            }
         }
     }
+    .flexslider {
+        height: 85%;
+    }
     .apartments {
-        height: 80vh;
         @include flexbox;
         &-left {
             @include flex-basis(57%);
@@ -262,8 +302,7 @@
 
 @media(min-width: 1600px) {
     .flexslider {
-        width: 75%;
-        height: 650px;
+        height: 85%;
     }
     .services {
         .service-1,
@@ -276,17 +315,35 @@
 }
 
 @media(max-width: 992px) and (orientation: landscape) {
-    .aparthotel{
+    .aparthotel {
         height: 200vh;
     }
-    .apartments{
-        height: 140vh;
+    .flexslider{
+        height: 100vh;
     }
-    .opinion{
+    .apartments {
+        height: 200vh;
+    }
+    .opinion {
         height: 95vh;
     }
-    .contact{
-        .map{
+    .contact {
+        .map {
+            height: 70vh;
+        }
+    }
+}
+
+@media(max-width: 992px) and (orientation: landscape) {
+    .aparthotel {
+
+    }
+    .apartments {}
+    .opinion {
+        height: 95vh;
+    }
+    .contact {
+        .map {
             height: 70vh;
         }
     }
