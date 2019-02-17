@@ -29,7 +29,7 @@ $(document).ready(function () {
     }, 4000);
 
     $('.flexslider').flexslider({
-        pauseOnAction: false,
+        pauseOnAction: true,
         slideshowSpeed: 3500,
         animationSpeed: 1000,
     });

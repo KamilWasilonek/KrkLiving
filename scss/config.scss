@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 $PlayfairDisplayFont: 'Playfair Display';
 $LatoFont: 'Lato';
+$OpenSansFont: 'Open Sans', sans-serif;
 $MainTitleColor: #992727;
 
 *{
@@ -140,8 +142,8 @@ $breakpoints: (
 }
 
 @mixin descriptionStyle {
-    font-family: $LatoFont;
-    @include cssLock(12,
+    font-family: $OpenSansFont;
+    @include cssLock(11,
     15,
     300,
     1200);

@@ -71,7 +71,7 @@ p {
             position: fixed;
             top: 5px;
             left: 25px;
-            @include cssLock(14, 16, 300, 1200);
+            @include cssLock(13, 15, 300, 1200);
             color: #000;
             text-align: center;
         }
@@ -175,7 +175,7 @@ p {
     width: 100%;
     max-width: 100%;
     margin: 30px 0 0 0;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
     &-left {
         display: none;
@@ -215,16 +215,11 @@ p {
         .title {
             @include titleStyle;
         }
-        .flexContainer {
-            @include flex-basis(50%);
-            max-width: 50%;
-            @include centerText;
-        }
     }
 }
 
-.section-shape{
-    height: 60px;
+.section-shape {
+    height: 50px;
     text-align: center;
 }
 
@@ -276,55 +271,54 @@ p {
 }
 
 .apartments {
-    height: 65vh;
     width: 100%;
     max-width: 100%;
-    margin-bottom: 30px;
+    margin: 30px 0 0 0;
+    height: 90vh;
+    overflow: hidden;
     &-left {
         height: 100%;
         .row-1,
-        .row-2 {
+        .row-2,
+        .row-3 {
             @include flexbox;
-            height: 50%;
+            height: 33.33333333%;
+            .border-container {
+                @include flex-basis(50%);
+                @include flexbox;
+                @include justify-content(center);
+                @include align-items(center);
+                text-align: center;
+                .title {
+                    width: 100%;
+                }
+            }
         }
-        .title,
         .img-1,
         .img-2,
-        .flexContainer {
+        .img-3 {
             @include flex-basis(50%);
+            height: 100%;
             max-width: 50%;
         }
-        .flexContainer {
-            @include flex-basis(50%);
-            max-width: 50%;
-            @include centerText;
-        }
-        .description-1 {
+        .title,
+        .description {
             width: 80%;
         }
-        .img-1,
-        .img-2 {
-            width: 100%;
-            height: 100%;
+        .description {
+            @include descriptionStyle;
         }
         .title {
             @include titleStyle;
-            @include centerText;
-        }
-        .description-1 {
-            @include descriptionStyle;
-        }
+        } 
     }
     &-right {
         display: none;
-        .img-4 {
-            width: 100%;
-            height: 100%;
-        }
     }
 }
 
 .opinion {
+    margin-top: 40px;
     width: 100%;
     height: 40vh;
     position: relative;
@@ -336,29 +330,39 @@ p {
         left: 0;
         z-index: -1;
     }
-    &-title {
-        @include titleStyle;
-        z-index: -1;
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        top: 5%;
-        text-align: center;
-        color: #fff;
-        margin: 0 auto;
-    }
-    &-slider {
-        @include cssLock(12, 18, 300, 1200);
+    &-overlay {
+        background: rgba(255, 255, 255, 0.6);
+        width: 100%;
         height: 100%;
-        width: 80%;
-        margin: 0 auto;
-        @include flexbox;
-        @include align-items(center);
-        text-align: center;
-        .content {
-            color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        .title {
+            @include titleStyle;
+            @include cssLock(16, 30, 300, 1200);
+            z-index: -1;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            top: 5%;
+            text-align: center;
+            color: #000;
+            margin: 0 auto;
+        }
+        .slider {
+            @include cssLock(12, 18, 300, 1200);
+            height: 100%;
+            width: 80%;
+            margin: 0 auto;
+            @include flexbox;
+            @include align-items(center);
+            text-align: center;
+            .content {
+                color: #000;
+            }
         }
     }
 }
@@ -377,7 +381,7 @@ p {
         }
         .details {
             @include descriptionStyle;
-            @include cssLock(12, 15, 300, 1200);
+            @include cssLock(11, 14, 300, 1200);
         }
         .address {
             margin: 20px 0;

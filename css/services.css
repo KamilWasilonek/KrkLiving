@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; }
 
 .services {
   padding-top: 50px;
   min-height: calc(100vh - 70px);
-  width: 100%; }
+  width: 100%;
+  overflow-x: hidden; }
   .services .service {
     width: 100%; }
     .services .service .service-img {
@@ -23,8 +25,8 @@
         font-size: calc(30px + (40 - 30) * ((100vw - 300px) / (1200 - 300)));
         padding-bottom: 10px; }
       .services .service .text .description {
-        font-family: "Lato";
-        font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
+        font-family: "Open Sans", sans-serif;
+        font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1200 - 300)));
         font-weight: 400;
         font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1200 - 300))); }
       .services .service .text .description-1 {
@@ -97,8 +99,8 @@
     text-align: center;
     margin: 10px; }
   .travel .flexContainer .text .description {
-    font-family: "Lato";
-    font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
+    font-family: "Open Sans", sans-serif;
+    font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1200 - 300)));
     font-weight: 400;
     font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1200 - 300)));
     text-align: center;
@@ -117,8 +119,8 @@
     font-size: calc(18px + (30 - 18) * ((100vw - 300px) / (1200 - 300)));
     margin-bottom: 10px; }
   .travel .details ul {
-    font-family: "Lato";
-    font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
+    font-family: "Open Sans", sans-serif;
+    font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1200 - 300)));
     font-weight: 400;
     font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1200 - 300)));
     width: 80%;

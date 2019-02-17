@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700|Playfair+Display:400,400i,700&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
 * {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; }
 
@@ -51,15 +53,15 @@ p {
     width: auto;
     height: 44px; }
   .header-menu .contact-text {
-    font-family: "Lato";
-    font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
+    font-family: "Open Sans", sans-serif;
+    font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1200 - 300)));
     font-weight: 400;
     opacity: 0;
     transition: opacity 0.5s ease;
     position: fixed;
     top: 5px;
     left: 25px;
-    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1200 - 300)));
+    font-size: calc(13px + (15 - 13) * ((100vw - 300px) / (1200 - 300)));
     color: #000;
     text-align: center; }
   .header-menu .menu-bar {
@@ -90,8 +92,8 @@ p {
       .header-menu .menu-bar .menu-btn.close .btn-line:nth-child(3) {
         transform: rotate(-45deg) translate(8px, -7px); }
   .header-menu .menu-nav {
-    font-family: "Lato";
-    font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
+    font-family: "Open Sans", sans-serif;
+    font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1200 - 300)));
     font-weight: 400;
     transition: background 0.5s ease-in-out;
     display: none;
@@ -142,7 +144,7 @@ p {
   width: 100%;
   max-width: 100%;
   margin: 30px 0 0 0;
-  height: 100vh;
+  height: 90vh;
   overflow: hidden; }
   .aparthotel-left {
     display: none; }
@@ -193,37 +195,17 @@ p {
     .aparthotel-right .description {
       width: 80%; }
     .aparthotel-right .description {
-      font-family: "Lato";
-      font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
+      font-family: "Open Sans", sans-serif;
+      font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1200 - 300)));
       font-weight: 400; }
     .aparthotel-right .title {
       font-family: "Playfair Display";
       font-weight: 400;
       color: #992727;
       font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300))); }
-    .aparthotel-right .flexContainer {
-      -webkit-flex-basis: 50%;
-      flex-basis: 50%;
-      max-width: 50%;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -moz-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -moz-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-      text-align: center; }
 
 .section-shape {
-  height: 60px;
+  height: 50px;
   text-align: center; }
 
 .flexslider {
@@ -254,8 +236,8 @@ p {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
     font-size: 14px;
     line-height: 25px;
-    font-family: "Lato";
-    font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
+    font-family: "Open Sans", sans-serif;
+    font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1200 - 300)));
     font-weight: 400; }
     .flexslider .flex-caption span {
       font-family: "Playfair Display";
@@ -271,85 +253,71 @@ p {
     z-index: 2; }
 
 .apartments {
-  height: 65vh;
   width: 100%;
   max-width: 100%;
-  margin-bottom: 30px; }
+  margin: 30px 0 0 0;
+  height: 90vh;
+  overflow: hidden; }
   .apartments-left {
     height: 100%; }
     .apartments-left .row-1,
-    .apartments-left .row-2 {
+    .apartments-left .row-2,
+    .apartments-left .row-3 {
       display: -webkit-box;
       display: -moz-box;
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      height: 50%; }
-    .apartments-left .title,
+      height: 33.33333333%; }
+      .apartments-left .row-1 .border-container,
+      .apartments-left .row-2 .border-container,
+      .apartments-left .row-3 .border-container {
+        -webkit-flex-basis: 50%;
+        flex-basis: 50%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -moz-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -moz-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+        text-align: center; }
+        .apartments-left .row-1 .border-container .title,
+        .apartments-left .row-2 .border-container .title,
+        .apartments-left .row-3 .border-container .title {
+          width: 100%; }
     .apartments-left .img-1,
     .apartments-left .img-2,
-    .apartments-left .flexContainer {
+    .apartments-left .img-3 {
       -webkit-flex-basis: 50%;
       flex-basis: 50%;
+      height: 100%;
       max-width: 50%; }
-    .apartments-left .flexContainer {
-      -webkit-flex-basis: 50%;
-      flex-basis: 50%;
-      max-width: 50%;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -moz-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -moz-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-      text-align: center; }
-    .apartments-left .description-1 {
+    .apartments-left .title,
+    .apartments-left .description {
       width: 80%; }
-    .apartments-left .img-1,
-    .apartments-left .img-2 {
-      width: 100%;
-      height: 100%; }
+    .apartments-left .description {
+      font-family: "Open Sans", sans-serif;
+      font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1200 - 300)));
+      font-weight: 400; }
     .apartments-left .title {
       font-family: "Playfair Display";
       font-weight: 400;
       color: #992727;
-      font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300)));
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-      -moz-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -moz-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
-      text-align: center; }
-    .apartments-left .description-1 {
-      font-family: "Lato";
-      font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
-      font-weight: 400; }
+      font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300))); }
   .apartments-right {
     display: none; }
-    .apartments-right .img-4 {
-      width: 100%;
-      height: 100%; }
 
 .opinion {
+  margin-top: 40px;
   width: 100%;
   height: 40vh;
   position: relative; }
@@ -360,39 +328,48 @@ p {
     top: 0;
     left: 0;
     z-index: -1; }
-  .opinion-title {
-    font-family: "Playfair Display";
-    font-weight: 400;
-    color: #992727;
-    font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300)));
-    z-index: -1;
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    top: 5%;
-    text-align: center;
-    color: #fff;
-    margin: 0 auto; }
-  .opinion-slider {
-    font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1200 - 300)));
+  .opinion-overlay {
+    background: rgba(255, 255, 255, 0.6);
+    width: 100%;
     height: 100%;
-    width: 80%;
-    margin: 0 auto;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -moz-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    text-align: center; }
-    .opinion-slider .content {
-      color: #fff; }
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+    .opinion-overlay .title {
+      font-family: "Playfair Display";
+      font-weight: 400;
+      color: #992727;
+      font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300)));
+      font-size: calc(16px + (30 - 16) * ((100vw - 300px) / (1200 - 300)));
+      z-index: -1;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      top: 5%;
+      text-align: center;
+      color: #000;
+      margin: 0 auto; }
+    .opinion-overlay .slider {
+      font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1200 - 300)));
+      height: 100%;
+      width: 80%;
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      text-align: center; }
+      .opinion-overlay .slider .content {
+        color: #000; }
 
 .contact-info {
   background-color: #000;
@@ -423,10 +400,10 @@ p {
     color: #fff;
     font-size: calc(30px + (35 - 30) * ((100vw - 300px) / (1200 - 300))); }
   .contact-info .details {
-    font-family: "Lato";
-    font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
+    font-family: "Open Sans", sans-serif;
+    font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1200 - 300)));
     font-weight: 400;
-    font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300))); }
+    font-size: calc(11px + (14 - 11) * ((100vw - 300px) / (1200 - 300))); }
   .contact-info .address {
     margin: 20px 0; }
   .contact-info .icons {
@@ -479,13 +456,14 @@ p {
     left: 20px; }
   .header-menu .contact-text {
     left: 40px; }
-  .flexslider {
-    height: 60%; }
   .aparthotel {
     width: 90%;
-    margin: 30px auto 0 auto; }
+    margin: 30px auto 0 auto;
+    height: 100vh; }
   .apartments {
-    height: 75vh; }
+    width: 90%;
+    margin: 30px auto 0 auto;
+    height: 100vh; }
   .contact-page-content .map-link {
     height: 250px; } }
 
@@ -495,10 +473,12 @@ p {
     top: 0; }
   .header-menu .contact-text {
     left: 70px; }
-  .flexslider {
-    height: 75%; }
-  .apartments {
-    height: 90vh; }
+  .opinion-overlay {
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%); }
   .services .service-1,
   .services .service-2,
   .services .service-3 {
@@ -541,8 +521,8 @@ p {
       text-align: center;
       margin-bottom: 10px; }
     .travel .details ul {
-      font-family: "Lato";
-      font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1200 - 300)));
+      font-family: "Open Sans", sans-serif;
+      font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1200 - 300)));
       font-weight: 400;
       font-size: calc(13px + (16 - 13) * ((100vw - 300px) / (1200 - 300)));
       display: flex;
@@ -671,21 +651,51 @@ p {
   .flexslider {
     height: 85%; }
   .apartments {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex; }
+    .apartments-right {
+      flex-basis: 40%;
+      max-width: 40%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      min-height: 100vh; }
+      .apartments-right .img-4 {
+        width: 100%;
+        height: 80%; }
     .apartments-left {
-      -webkit-flex-basis: 57%;
       flex-basis: 57%;
       max-width: 57%;
-      padding-right: 3%; }
-    .apartments-right {
-      display: block;
-      -webkit-flex-basis: 40%;
-      flex-basis: 40%;
-      max-width: 40%; }
+      padding-right: 2%; }
+      .apartments-left .row-1 .border-container .title {
+        padding: 5px 0px;
+        border: 2px #992727 solid;
+        width: 90%; }
+      .apartments-left .row-2 .description,
+      .apartments-left .row-3 .description {
+        width: 85%;
+        padding: 30px 10px; }
+      .apartments-left .row-2 .border-container .description-1 {
+        border-top: 2px solid #992727;
+        border-left: 2px solid #992727;
+        background: linear-gradient(#992727, #992727) left bottom no-repeat;
+        background-size: 20% 2px; }
+      .apartments-left .row-3 .border-container .description-2 {
+        border-top: 2px solid #992727;
+        border-right: 2px solid #992727;
+        background: linear-gradient(#992727, #992727) right bottom no-repeat;
+        background-size: 20% 2px; }
   .opinion {
     height: 65vh; }
   .contact-page-content .map-link {
@@ -700,19 +710,13 @@ p {
     display: flex;
     height: 500px; } }
 
-@media (max-width: 992px) and (orientation: landscape) {
+@media (max-width: 768px) and (orientation: landscape) {
   .aparthotel {
-    height: 200vh; }
+    height: 130vh; }
   .flexslider {
     height: 100vh; }
   .apartments {
     height: 200vh; }
-  .opinion {
-    height: 95vh; }
-  .contact .map {
-    height: 70vh; } }
-
-@media (max-width: 992px) and (orientation: landscape) {
   .opinion {
     height: 95vh; }
   .contact .map {
