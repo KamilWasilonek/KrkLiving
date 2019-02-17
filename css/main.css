@@ -132,7 +132,7 @@ p {
   .header-description .title,
   .header-description .content {
     font-weight: 400;
-    font-family: "Playfair Display"; }
+    font-family: "Open Sans", sans-serif; }
   .header-description .title {
     line-height: 1.1;
     font-size: calc(45px + (60 - 45) * ((100vw - 300px) / (1200 - 300))); }
@@ -199,18 +199,20 @@ p {
       font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1200 - 300)));
       font-weight: 400; }
     .aparthotel-right .title {
-      font-family: "Playfair Display";
+      font-family: "Open Sans", sans-serif;
       font-weight: 400;
       color: #992727;
-      font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300))); }
+      font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1200 - 300))); }
 
 .section-shape {
-  height: 50px;
-  text-align: center; }
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .flexslider {
   position: relative;
-  margin: 30px 0;
+  margin: 0 0 30px 0;
   width: 100%;
   height: 50%;
   border: 0;
@@ -240,10 +242,10 @@ p {
     font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1200 - 300)));
     font-weight: 400; }
     .flexslider .flex-caption span {
-      font-family: "Playfair Display";
+      font-family: "Open Sans", sans-serif;
       font-weight: 400;
       color: #992727;
-      font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300)));
+      font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1200 - 300)));
       color: #fff;
       margin-bottom: 10px; }
   .flexslider .flex-control-paging {
@@ -309,15 +311,14 @@ p {
       font-size: calc(11px + (15 - 11) * ((100vw - 300px) / (1200 - 300)));
       font-weight: 400; }
     .apartments-left .title {
-      font-family: "Playfair Display";
+      font-family: "Open Sans", sans-serif;
       font-weight: 400;
       color: #992727;
-      font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300))); }
+      font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1200 - 300))); }
   .apartments-right {
     display: none; }
 
 .opinion {
-  margin-top: 40px;
   width: 100%;
   height: 40vh;
   position: relative; }
@@ -337,36 +338,20 @@ p {
     left: 0;
     z-index: -1; }
     .opinion-overlay .title {
-      font-family: "Playfair Display";
+      font-family: "Open Sans", sans-serif;
       font-weight: 400;
       color: #992727;
-      font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300)));
+      font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1200 - 300)));
       font-size: calc(16px + (30 - 16) * ((100vw - 300px) / (1200 - 300)));
-      z-index: -1;
-      position: absolute;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-      top: 5%;
+      margin-top: 15px;
+      margin-bottom: 25px;
       text-align: center;
-      color: #000;
-      margin: 0 auto; }
+      color: #000; }
     .opinion-overlay .slider {
       font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1200 - 300)));
       height: 100%;
       width: 80%;
       margin: 0 auto;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -moz-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center;
       text-align: center; }
       .opinion-overlay .slider .content {
         color: #000; }
@@ -393,10 +378,10 @@ p {
   text-align: center;
   flex-direction: column; }
   .contact-info .title {
-    font-family: "Playfair Display";
+    font-family: "Open Sans", sans-serif;
     font-weight: 400;
     color: #992727;
-    font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300)));
+    font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1200 - 300)));
     color: #fff;
     font-size: calc(30px + (35 - 30) * ((100vw - 300px) / (1200 - 300))); }
   .contact-info .details {
@@ -474,7 +459,7 @@ p {
   .header-menu .contact-text {
     left: 70px; }
   .opinion-overlay {
-    height: 80%;
+    height: 50%;
     position: absolute;
     top: 50%;
     left: 0;
@@ -517,10 +502,10 @@ p {
   .travel .details {
     width: 100%; }
     .travel .details .sub-title {
-      font-family: "Playfair Display";
+      font-family: "Open Sans", sans-serif;
       font-weight: 400;
       color: #992727;
-      font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300)));
+      font-size: calc(20px + (30 - 20) * ((100vw - 300px) / (1200 - 300)));
       font-size: calc(18px + (30 - 18) * ((100vw - 300px) / (1200 - 300)));
       text-align: center;
       margin-bottom: 10px; }
@@ -609,8 +594,8 @@ p {
   .aparthotel {
     display: flex; }
     .aparthotel-left {
-      flex-basis: 40%;
-      max-width: 40%;
+      flex-basis: 35%;
+      max-width: 35%;
       display: -webkit-box;
       display: -moz-box;
       display: -webkit-flex;
@@ -633,7 +618,7 @@ p {
     .aparthotel-right {
       flex-basis: 57%;
       max-width: 57%;
-      padding-left: 2%; }
+      padding-left: 7%; }
       .aparthotel-right .row-1 .border-container .title {
         padding: 30px 0px;
         border: 2px #992727 solid;
@@ -641,7 +626,7 @@ p {
       .aparthotel-right .row-2 .description,
       .aparthotel-right .row-3 .description {
         width: 85%;
-        padding: 30px 10px; }
+        padding: 15px 10px; }
       .aparthotel-right .row-2 .border-container .description-1 {
         border-top: 2px solid #992727;
         border-right: 2px solid #992727;
@@ -657,8 +642,8 @@ p {
   .apartments {
     display: flex; }
     .apartments-right {
-      flex-basis: 40%;
-      max-width: 40%;
+      flex-basis: 35%;
+      max-width: 35%;
       display: -webkit-box;
       display: -moz-box;
       display: -webkit-flex;
@@ -681,15 +666,15 @@ p {
     .apartments-left {
       flex-basis: 57%;
       max-width: 57%;
-      padding-right: 2%; }
+      padding-right: 7%; }
       .apartments-left .row-1 .border-container .title {
-        padding: 5px 0px;
+        padding: 30px 0px;
         border: 2px #992727 solid;
         width: 90%; }
       .apartments-left .row-2 .description,
       .apartments-left .row-3 .description {
         width: 85%;
-        padding: 30px 10px; }
+        padding: 15px 10px; }
       .apartments-left .row-2 .border-container .description-1 {
         border-top: 2px solid #992727;
         border-left: 2px solid #992727;

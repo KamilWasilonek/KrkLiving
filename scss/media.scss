@@ -49,7 +49,7 @@
     }
     .opinion{
         &-overlay{
-            height: 80%;
+            height: 50%;
             position: absolute;
             top: 50%;
             left: 0;
@@ -223,8 +223,8 @@
     .aparthotel {
         display: flex;
         &-left {
-            flex-basis: 40%;
-            max-width: 40%;
+            flex-basis: 35%;
+            max-width: 35%;
             @include flexbox;
             @include align-items(center);
             @include justify-content(center);
@@ -237,7 +237,7 @@
         &-right {
             flex-basis: 57%;
             max-width: 57%;
-            padding-left: 2%;
+            padding-left: 7%;
             .row-1 {
                 .border-container {
                     .title {
@@ -251,7 +251,7 @@
             .row-3 {
                 .description {
                     width: 85%;
-                    padding: 30px 10px;
+                    padding: 15px 10px;
                 }
             }
             .row-2 {
@@ -282,8 +282,8 @@
     .apartments {
         display: flex;
         &-right {
-            flex-basis: 40%;
-            max-width: 40%;
+            flex-basis: 35%;
+            max-width: 35%;
             @include flexbox;
             @include align-items(center);
             @include justify-content(center);
@@ -296,11 +296,11 @@
         &-left {
             flex-basis: 57%;
             max-width: 57%;
-            padding-right: 2%;
+            padding-right: 7%;
             .row-1 {
                 .border-container {
                     .title {
-                        padding: 5px 0px;
+                        padding: 30px 0px;
                         border: 2px $MainTitleColor solid;
                         width: 90%;
                     }
@@ -310,7 +310,7 @@
             .row-3 {
                 .description {
                     width: 85%;
-                    padding: 30px 10px;
+                    padding: 15px 10px;
                 }
             }
             .row-2 {

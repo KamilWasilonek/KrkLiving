@@ -132,11 +132,11 @@ $breakpoints: (
 }
 
 @mixin titleStyle {
-    font-family: $PlayfairDisplayFont;
+    font-family: $OpenSansFont;
     font-weight: 400;
     color: $MainTitleColor;
     @include cssLock(20,
-    40,
+    30,
     300,
     1200);
 }
