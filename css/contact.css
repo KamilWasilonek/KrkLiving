@@ -169,6 +169,9 @@
     .travel .flexContainer .travel-2 {
       width: 44%;
       padding: 0 3%; }
+      .travel .flexContainer .travel-1 img,
+      .travel .flexContainer .travel-2 img {
+        height: 400px; }
   .travel .details {
     width: 100%; }
     .travel .details .sub-title {

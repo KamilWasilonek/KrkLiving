@@ -30,7 +30,7 @@ $(document).ready(function () {
 
     $('.flexslider').flexslider({
         pauseOnAction: true,
-        slideshowSpeed: 3500,
+        slideshowSpeed: 5000,
         animationSpeed: 1000,
     });
 })

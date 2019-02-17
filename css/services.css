@@ -11,6 +11,7 @@
   .services .service {
     width: 100%; }
     .services .service .service-img {
+      height: 350px;
       width: 100%; }
     .services .service .text {
       padding: 20px 0 30px 0;
@@ -58,7 +59,7 @@
   margin: 40px 0 40px 0; }
   .travel .flexContainer .travel-1 img,
   .travel .flexContainer .travel-2 img {
-    height: 400px; }
+    height: 300px; }
 
 .travel .flexContainer .title {
   font-family: "Playfair Display";
@@ -95,7 +96,7 @@
     font-weight: 400;
     color: #992727;
     font-size: calc(20px + (40 - 20) * ((100vw - 300px) / (1200 - 300)));
-    font-size: calc(15px + (25 - 15) * ((100vw - 300px) / (1200 - 300)));
+    font-size: calc(20px + (25 - 20) * ((100vw - 300px) / (1200 - 300)));
     text-align: center;
     margin: 10px; }
   .travel .flexContainer .text .description {
