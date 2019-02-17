@@ -320,7 +320,7 @@ p {
 
 .opinion {
   width: 100%;
-  height: 40vh;
+  height: 200px;
   position: relative; }
   .opinion-background {
     width: 100%;
@@ -333,10 +333,28 @@ p {
     background: rgba(255, 255, 255, 0.6);
     width: 100%;
     height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1; }
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
     .opinion-overlay .title {
       font-family: "Open Sans", sans-serif;
       font-weight: 400;
@@ -348,7 +366,8 @@ p {
       text-align: center;
       color: #000; }
     .opinion-overlay .slider {
-      font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1200 - 300)));
+      font-size: calc(11px + (16 - 11) * ((100vw - 300px) / (1200 - 300)));
+      font-family: "Open Sans", sans-serif;
       height: 100%;
       width: 80%;
       margin: 0 auto;
@@ -458,12 +477,14 @@ p {
     top: 0; }
   .header-menu .contact-text {
     left: 70px; }
-  .opinion-overlay {
-    height: 50%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0%, -50%); }
+  .opinion {
+    min-height: 400px; }
+    .opinion-overlay {
+      height: 50%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0%, -50%); }
   .services .service-1,
   .services .service-2,
   .services .service-3 {
@@ -685,8 +706,6 @@ p {
         border-right: 2px solid #992727;
         background: linear-gradient(#992727, #992727) right bottom no-repeat;
         background-size: 20% 2px; }
-  .opinion {
-    height: 65vh; }
   .contact-page-content .map-link {
     height: 300px; } }
 
@@ -697,16 +716,24 @@ p {
   .services .service-2,
   .services .service-3 {
     display: flex;
-    height: 500px; } }
+    height: 500px; }
+  .opinion {
+    min-height: 470px; }
+  .aparthotel-right .row-1 .border-container .title {
+    padding: 30px 5px;
+    border: 2px #992727 solid;
+    width: 90%; }
+  .apartments-right .row-1 .border-container .title {
+    padding: 30px 5px;
+    border: 2px #992727 solid;
+    width: 90%; } }
 
 @media (max-width: 768px) and (orientation: landscape) {
   .aparthotel {
-    height: 130vh; }
+    height: 200vh; }
   .flexslider {
     height: 100vh; }
   .apartments {
     height: 200vh; }
-  .opinion {
-    height: 95vh; }
   .contact .map {
     height: 70vh; } }

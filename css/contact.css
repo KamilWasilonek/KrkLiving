@@ -132,12 +132,14 @@
     top: 0; }
   .header-menu .contact-text {
     left: 70px; }
-  .opinion-overlay {
-    height: 50%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0%, -50%); }
+  .opinion {
+    min-height: 400px; }
+    .opinion-overlay {
+      height: 50%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0%, -50%); }
   .services .service-1,
   .services .service-2,
   .services .service-3 {
@@ -359,8 +361,6 @@
         border-right: 2px solid #992727;
         background: linear-gradient(#992727, #992727) right bottom no-repeat;
         background-size: 20% 2px; }
-  .opinion {
-    height: 65vh; }
   .contact-page-content .map-link {
     height: 300px; } }
 
@@ -371,16 +371,24 @@
   .services .service-2,
   .services .service-3 {
     display: flex;
-    height: 500px; } }
+    height: 500px; }
+  .opinion {
+    min-height: 470px; }
+  .aparthotel-right .row-1 .border-container .title {
+    padding: 30px 5px;
+    border: 2px #992727 solid;
+    width: 90%; }
+  .apartments-right .row-1 .border-container .title {
+    padding: 30px 5px;
+    border: 2px #992727 solid;
+    width: 90%; } }
 
 @media (max-width: 768px) and (orientation: landscape) {
   .aparthotel {
-    height: 130vh; }
+    height: 200vh; }
   .flexslider {
     height: 100vh; }
   .apartments {
     height: 200vh; }
-  .opinion {
-    height: 95vh; }
   .contact .map {
     height: 70vh; } }

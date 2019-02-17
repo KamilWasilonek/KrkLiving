@@ -47,8 +47,9 @@
             }
         }
     }
-    .opinion{
-        &-overlay{
+    .opinion {
+        min-height: 400px;
+        &-overlay {
             height: 50%;
             position: absolute;
             top: 50%;
@@ -90,7 +91,7 @@
             .travel-2 {
                 width: 44%;
                 padding: 0 3%;
-                img{
+                img {
                     height: 400px;
                 }
             }
@@ -335,10 +336,6 @@
             }
         }
     }
-
-    .opinion {
-        height: 65vh;
-    }
     .contact-page {
         &-content {
             .map-link {
@@ -360,21 +357,50 @@
             height: 500px;
         }
     }
+    .opinion {
+        min-height: 470px;
+    }
+    .aparthotel {
+        &-right {
+            .row-1 {
+                .border-container {
+                    .title {
+                        padding: 30px 5px;
+                        border: 2px $MainTitleColor solid;
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+    .apartments {
+        &-right {
+            .row-1 {
+                .border-container {
+                    .title {
+                        padding: 30px 5px;
+                        border: 2px $MainTitleColor solid;
+                        width: 90%;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media(max-width: 768px) and (orientation: landscape) {
     .aparthotel {
-        height: 130vh;
+        height: 200vh;
     }
-    .flexslider{
+    .flexslider {
         height: 100vh;
     }
     .apartments {
         height: 200vh;
-    }
-    .opinion {
-        height: 95vh;
-    }
+    } // .opinion {
+    //     height: 95vh;
+    // }
     .contact {
         .map {
             height: 70vh;
