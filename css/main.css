@@ -227,6 +227,10 @@ p {
       .flexslider .slides li img {
         height: 100%;
         width: 100%; }
+      .flexslider .slides li .img-3 {
+        position: absolute;
+        top: -30%;
+        height: 130%; }
   .flexslider .flex-caption {
     position: absolute;
     width: 96%;

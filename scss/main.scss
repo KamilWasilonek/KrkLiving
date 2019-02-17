@@ -243,6 +243,11 @@ p {
                 height: 100%;
                 width: 100%;
             }
+            .img-3 {
+                position: absolute;
+                top: -30%;
+                height: 130%;
+            }
         }
     }
     .flex-caption {
@@ -312,7 +317,7 @@ p {
         }
         .title {
             @include titleStyle;
-        } 
+        }
     }
     &-right {
         display: none;
@@ -338,8 +343,7 @@ p {
         @include flexbox;
         @include justify-content(center);
         @include align-items(center);
-        @include flex-direction(column);
-        // position: absolute;
+        @include flex-direction(column); // position: absolute;
         // top: 0;
         // left: 0;
         // z-index: -1;
