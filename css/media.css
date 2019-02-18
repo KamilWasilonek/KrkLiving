@@ -42,7 +42,7 @@
     .services .service-2 .service-img,
     .services .service-3 .service-img {
       width: 50%;
-      height: 350px; }
+      height: 100%; }
     .services .service-1 .text,
     .services .service-2 .text,
     .services .service-3 .text {

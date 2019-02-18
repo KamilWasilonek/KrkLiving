@@ -26,7 +26,7 @@ $(document).ready(function () {
             i = 0;
         }
         $("#opinion #content").html(texts[i]);
-    }, 4000);
+    }, 6000);
 
     $('.flexslider').flexslider({
         pauseOnAction: true,
